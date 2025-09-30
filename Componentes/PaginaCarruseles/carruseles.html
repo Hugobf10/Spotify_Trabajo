@@ -14,19 +14,30 @@
 <!-- CSS propio -->
 <link rel="stylesheet" href="css/css_carruseles.css">
 </head>
-<body class="pagprinc">
+<body class="bg-dark">
 
 <div class="container-fluid p-3">
     <div class="row">
-        <div class="col-lg-2 mb-3 mb-lg-0">
-            <h1>Hola World</h1>
+        <!-- Sidebar -->
+        <div class="col-3 p-3  text-white rounded me-3 style="background: linear-gradient(to top, #000000, #454645);">
+            <h1 class="montserrat">Hola World</h1>
+            <hr class="text-secondary">
+            <h5>Tu Biblioteca</h5>
+            <ul class="list-unstyled mt-3">
+                <li><a href="#" class="text-white text-decoration-none">Recientes</a></li>
+                <li><a href="#" class="text-white text-decoration-none">Canciones</a></li>
+                <li><a href="#" class="text-white text-decoration-none">Artistas</a></li>
+                <li><a href="#" class="text-white text-decoration-none">Álbumes</a></li>
+            </ul>
+            <button class="btn btn-light mt-3">Crear lista</button>
         </div>
 
-        <div class="col bg-dark text-white p-3 rounded position-relative">
+        <!-- Contenido principal: carruseles -->
+        <div class="col pagprinc text-white p-3 rounded position-relative">
             <h4 class="montserrat mb-4">Canciones en tendencia</h4>
 
-            <!-- Carrusel lineal tipo Spotify -->
-            <div id="carruselCanciones" class="d-flex overflow-auto flex-nowrap pb-3">
+            <div id="carruselCanciones1" class="d-flex overflow-auto flex-nowrap pb-3">
+                <!-- Tus tarjetas de canciones -->
                 <div class="card transparente-card me-3">
                     <img src="img/ruina.png" class="card-img-top" alt="Ruina">
                     <div class="card-body">
@@ -62,29 +73,20 @@
                         <p class="card-text">Feid</p>
                     </div>
                 </div>
-                                <div class="card transparente-card me-3">
-                    <img src="img/rumor.png" class="card-img-top" alt="RU MOR">
-                    <div class="card-body">
-                        <h5 class="card-text">RU MOR</h5>
-                        <p class="card-text">Feid</p>
-                    </div>
-                </div>
             </div>
 
-            <!-- Botones sobre la primera y última tarjeta -->
+            <!-- Botones del primer carrusel -->
             <button class="carousel-btn-prev position-absolute top-50 start-0 translate-middle-y">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
-                </svg>
+                <!-- SVG izquierda -->
             </button>
             <button class="carousel-btn-next position-absolute top-50 end-0 translate-middle-y">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-11-.5a.5.5 0 0 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L7.293 8 4.5 5.207z"/>
-                </svg>
+                <!-- SVG derecha -->
             </button>
-                        <!-- Carrusel lineal tipo Spotify -->
-                         <h4 class="montserrat mb-4"> Artistas Populares</h4>
-            <div id="carruselCanciones" class="d-flex overflow-auto flex-nowrap pb-3">
+
+            <!-- Segundo carrusel: Artistas Populares -->
+            <h4 class="montserrat mb-4 mt-5">Artistas Populares</h4>
+            <div id="carruselCanciones2" class="d-flex overflow-auto flex-nowrap pb-3">
+                <!-- Tus tarjetas de artistas -->
                 <div class="card transparente-card me-3">
                     <img src="img/ruina.png" class="card-img-top redondeo" alt="Ruina">
                     <div class="card-body">
@@ -122,16 +124,12 @@
                 </div>
             </div>
 
-            <!-- Botones sobre la primera y última tarjeta -->
+            <!-- Botones del segundo carrusel -->
             <button class="carousel-btn-prev position-absolute top-50 start-0 translate-middle-y">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
-                </svg>
+                <!-- SVG izquierda -->
             </button>
             <button class="carousel-btn-next position-absolute top-50 end-0 translate-middle-y">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-11-.5a.5.5 0 0 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L7.293 8 4.5 5.207z"/>
-                </svg>
+                <!-- SVG derecha -->
             </button>
         </div>
     </div>
@@ -140,6 +138,7 @@
 <script defer src="paginacarrusel/paginacarrusel.js"></script>
 </body>
 </html>
+
 
 
 

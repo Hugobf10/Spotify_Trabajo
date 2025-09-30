@@ -1,7 +1,19 @@
+/* Tipografía general */
 body {
     font-family: 'Montserrat', sans-serif;
+    background-color: #000000;
 }
 
+/* Sidebar */
+.sidebar {
+    background-color: #1c1c1c;
+    color: white;
+    padding: 1rem;
+    border-radius: 15px;
+    height: 100%;
+}
+
+/* Carrusel */
 .transparente-card {
     background-color: transparent;
     border: none;
@@ -20,14 +32,24 @@ body {
     text-decoration: underline;
 }
 
+/* Imágenes y redondeo */
 img {
     border-radius: 15px;
 }
 
+/* Clase específica para artistas circulares */
+.redondeo {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%; /* fuerza circular */
+}
+
+/* Fondo y estilo general de la página */
 .pagprinc {
     position: relative;
     z-index: 1;
-    background: linear-gradient(to top, #000000, #848684);
+    background: linear-gradient(to top, #000000, #454645);
     width: 100%;
     min-height: 100vh;
     border-radius: 15px;
@@ -38,45 +60,43 @@ img {
     font-weight: 506;
     font-style: italic;
 }
-#carruselCanciones {
 
+/* Contenedor de carrusel */
+#carruselCanciones1, #carruselCanciones2 {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     padding-bottom: 1rem;
+    gap: 1rem; /* separación uniforme entre tarjetas */
 }
 
-#carruselCanciones::-webkit-scrollbar {
+#carruselCanciones1::-webkit-scrollbar, #carruselCanciones2::-webkit-scrollbar {
     display: none; /* oculta scrollbar */
 }
 
-#carruselCanciones .card {
+/* Tarjetas de carrusel: mismo tamaño */
+#carruselCanciones1 .card,
+#carruselCanciones2 .card {
     flex: 0 0 auto;
     scroll-snap-align: start;
     border-radius: 15px;
     overflow: hidden;
+    width: 10rem; /* ancho uniforme */
+    height: 10rem; /* altura uniforme */
+    text-align: center;
 }
 
-/* Tamaño uniforme de las tarjetas según dispositivo */
-@media (max-width: 576px) {
-    #carruselCanciones .card { width: 8rem; }
-}
-@media (min-width: 577px) and (max-width: 992px) {
-    #carruselCanciones .card { width: 8rem; }
-}
-@media (min-width: 993px) {
-    #carruselCanciones .card { width: 8rem; }
-}
-
-#carruselCanciones .card-img-top {
+/* Imagen de la tarjeta */
+#carruselCanciones1 .card-img-top,
+#carruselCanciones2 .card-img-top {
     width: 100%;
-    height: auto;
-    aspect-ratio: 1/1;
+    height: 100%;
     object-fit: cover;
+    border-radius: inherit; /* mantiene bordes */
 }
 
-/* Botones sobre la primera y última tarjeta */
+/* Botones del carrusel */
 .carousel-btn-prev, .carousel-btn-next {
     background: rgba(0,0,0,0.5);
     border-radius: 50%;
@@ -89,12 +109,20 @@ img {
     cursor: pointer;
     z-index: 10;
 }
-#carruselCanciones .redondeo {
-    width: 100%;
-    aspect-ratio: 1/1;   /* Mantiene la imagen cuadrada */
-    object-fit: cover;    /* Ajusta la imagen sin deformarla */
-    border-radius: 50%;   /* Hace la imagen circular */
+
+/* Responsividad: se puede ajustar */
+@media (max-width: 576px) {
+    #carruselCanciones1 .card, #carruselCanciones2 .card { width: 8rem; height: 8rem; }
 }
+@media (min-width: 577px) and (max-width: 992px) {
+    #carruselCanciones1 .card, #carruselCanciones2 .card { width: 9rem; height: 9rem; }
+}
+@media (min-width: 993px) {
+    #carruselCanciones1 .card, #carruselCanciones2 .card { width: 10rem; height: 10rem; }
+}
+
+
+
 
 
 
