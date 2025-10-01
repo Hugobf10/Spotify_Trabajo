@@ -1,0 +1,120 @@
+.cabecera {
+    background-color: black; /* Color fondo */
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* espacia logo y círculo */
+    padding:  20px; /* espacio lateral */
+    position: relative;
+}
+
+/* Logo principal */
+.imgLogo {
+    height: 45px;
+    cursor: pointer;
+}
+
+/* Logo móvil */
+.imgLogoEntero {
+    height: 30px;
+}
+
+/* Cículo con la casa y buscador */
+.circulo {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background-color: #2B2B2B;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.circulo:hover {
+  transform: scale(1.05); /* agranda un 10% */
+  background-color: #3a3a3a;
+}
+
+/* Buscador */.buscador {
+  width: 350px;       /* largo horizontal */
+  max-width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .buscador {
+    width: 250px; /* más pequeño en tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .buscador {
+    width: 180px; /* aún más pequeño en móviles */
+  }
+}
+
+
+.buscador .input-group {
+  border-radius: 25px; /* bordes redondeados */
+  overflow: hidden;
+  height: 45px;        /* más alto */
+}
+
+.buscador .input-group-text {
+  background-color: #2B2B2B;
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.buscador input {
+  background-color: #2B2B2B;
+  border: none;
+  color: white;
+  border-radius: 25px;
+  transition: transform 0.3s ease, background-color 0.3s ease; /* transición suave */
+}
+
+/* Hover solo para el input */
+.buscador input:hover {
+  transform: scale(1.05);          /* agranda un poco */
+  background-color: #3a3a3a;       /* se ilumina un poco */
+}
+
+.buscador input::placeholder {
+  color: #aaa;
+}
+
+.buscador input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Transiciones para todo el buscador */
+.buscador .input-group {
+  transition: transform 0.3s ease, background-color 0.3s ease; /* igual que la casita */
+}
+
+.buscador .input-group:hover {
+   border: 2px solid rgba(255, 255, 255, 0.4); /* borde blanco sutil */
+}
+
+/* Cambiar fondo al input y a la lupa al pasar el ratón */
+.buscador .input-group:hover input,
+.buscador .input-group:hover .input-group-text {
+  background-color: #3a3a3a;
+  transition: background-color 0.3s ease; /* suave como la casita */
+}
+
+
+.circulo-buscador {
+  position: absolute;
+  left: 30%;               /* posición horizontal central */
+  top: 30%;                /* posición vertical en la cabecera */
+  transform: translate(-50%, -50%); /* centra exactamente */
+  display: flex;
+  align-items: center;
+  left: 47%;
+  padding-top: 25px;
+}
