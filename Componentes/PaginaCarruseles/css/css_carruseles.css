@@ -1,104 +1,122 @@
-/* Tipografía general */
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #000000;
+    background-color: #000;
+    margin: 0;
+    overflow-x: hidden; /* evita scroll horizontal */
 }
 
-/* Sidebar */
+/* Sidebar fijo */
 .sidebar {
-    background-color: #1c1c1c;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 375px;        /* ancho del sidebar */
+    height: 100vh;
+    background:#2c2c2c;
     color: white;
-    padding: 1rem;
-    border-radius: 15px;
-    height: 100%;
+    padding: 1.5rem;
+    border-radius: 0 15px 15px 0;
+    z-index: 100;
 }
 
-/* Carrusel */
-.transparente-card {
-    background-color: transparent;
-    border: none;
-    transition: transform 0.2s;
-}
-
-.transparente-card:hover {
-    transform: scale(1.05);
-}
-
-.card-text, h5, p {
-    color: white;
-}
-
-.card-text:hover {
-    text-decoration: underline;
-}
-
-/* Imágenes y redondeo */
-img {
-    border-radius: 15px;
-}
-
-/* Clase específica para artistas circulares */
-.redondeo {
-    width: 100%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    border-radius: 50%; /* fuerza circular */
-}
-
-/* Fondo y estilo general de la página */
+/* Contenido principal */
 .pagprinc {
-    position: relative;
-    z-index: 1;
-    background: linear-gradient(to top, #000000, #454645);
-    width: 100%;
+    border-radius: 0 15px 15px 0;
+    margin-left: 375px;   /* espacio suficiente para el sidebar */
+    padding: 2rem;
     min-height: 100vh;
-    border-radius: 15px;
+    background: linear-gradient(to top, #000000, #454645);
 }
 
-.montserrat {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 506;
-    font-style: italic;
+.sidebar h5, .sidebar h6 {
+    margin-bottom: 0.5rem;
 }
 
-/* Contenedor de carrusel */
+.sidebar ul li {
+    margin-bottom: 0.5rem;
+}
+
+
+/* Carruseles */
 #carruselCanciones1, #carruselCanciones2 {
     display: flex;
-    overflow-x: auto;
+    overflow-x: auto;              /* solo horizontal */
+    overflow-y: hidden;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    gap: 1rem;
     padding-bottom: 1rem;
-    gap: 1rem; /* separación uniforme entre tarjetas */
 }
 
-#carruselCanciones1::-webkit-scrollbar, #carruselCanciones2::-webkit-scrollbar {
+#carruselCanciones1::-webkit-scrollbar, 
+#carruselCanciones2::-webkit-scrollbar {
     display: none; /* oculta scrollbar */
 }
 
-/* Tarjetas de carrusel: mismo tamaño */
+/* Tarjetas del carrusel */
 #carruselCanciones1 .card,
 #carruselCanciones2 .card {
     flex: 0 0 auto;
+    width: 10rem; /* ancho fijo */
     scroll-snap-align: start;
     border-radius: 15px;
     overflow: hidden;
-    width: 10rem; /* ancho uniforme */
-    height: 10rem; /* altura uniforme */
     text-align: center;
+    border: none;
 }
 
-/* Imagen de la tarjeta */
-#carruselCanciones1 .card-img-top,
-#carruselCanciones2 .card-img-top {
+/* Imágenes cuadradas y circulares */
+#carruselCanciones1 .card-img-top {
     width: 100%;
-    height: 100%;
+    aspect-ratio: 1/1;
     object-fit: cover;
-    border-radius: inherit; /* mantiene bordes */
+    border-radius: 15px;
+}
+img{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#carruselCanciones2 .card-img-top.redondeo {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%; /* círculo perfecto */
+}
+
+/* Texto de tarjetas */
+#carruselCanciones1 .card-body,
+#carruselCanciones2 .card-body {
+    padding: 0.5rem;
+    color: white;
+}
+
+/* Hover en tarjetas */
+.transparente-card {
+    background-color: rgba(255, 255, 255, 0); /* sin fondo por defecto */
+    border: none;
+    transition: background-color 0.3s, transform 0.3s; /* transición suave */
+}
+
+.transparente-card:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* fondo semi-transparente al pasar el ratón */
+    transform: scale(1.05); /* ligero zoom al pasar el ratón */
+}
+
+.card-text:hover{
+    text-decoration: underline;
+}
+.contenedorlado{
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+}
+.mostrar:hover{
+    text-decoration: underline;
 }
 
 /* Botones del carrusel */
 .carousel-btn-prev, .carousel-btn-next {
-    background: rgba(0,0,0,0.5);
+    background: rgba(235, 231, 231, 0.5);
     border-radius: 50%;
     border: none;
     width: 2.5rem;
@@ -110,16 +128,29 @@ img {
     z-index: 10;
 }
 
-/* Responsividad: se puede ajustar */
+/* Responsividad */
 @media (max-width: 576px) {
-    #carruselCanciones1 .card, #carruselCanciones2 .card { width: 8rem; height: 8rem; }
+    #carruselCanciones1 .card,
+    #carruselCanciones2 .card { width: 8rem; }
+    .sidebar{
+        display:none
+    }
+    .pagprinc{
+        margin-left: 0;
+        padding: 1rem;
+    }
 }
 @media (min-width: 577px) and (max-width: 992px) {
-    #carruselCanciones1 .card, #carruselCanciones2 .card { width: 9rem; height: 9rem; }
+    #carruselCanciones1 .card,
+    #carruselCanciones2 .card { width: 9rem; }
 }
 @media (min-width: 993px) {
-    #carruselCanciones1 .card, #carruselCanciones2 .card { width: 10rem; height: 10rem; }
+    #carruselCanciones1 .card,
+    #carruselCanciones2 .card { width: 10rem; }
 }
+
+
+
 
 
 

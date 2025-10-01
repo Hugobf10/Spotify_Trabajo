@@ -14,123 +14,271 @@
 <!-- CSS propio -->
 <link rel="stylesheet" href="css/css_carruseles.css">
 </head>
-<body class="bg-dark">
+<body>
 
-<div class="container-fluid p-3">
-    <div class="row">
-        <!-- Sidebar -->
-        <div class="col-3 p-3  text-white rounded me-3 style="background: linear-gradient(to top, #000000, #454645);">
-            <h1 class="montserrat">Hola World</h1>
-            <hr class="text-secondary">
-            <h5>Tu Biblioteca</h5>
-            <ul class="list-unstyled mt-3">
-                <li><a href="#" class="text-white text-decoration-none">Recientes</a></li>
-                <li><a href="#" class="text-white text-decoration-none">Canciones</a></li>
-                <li><a href="#" class="text-white text-decoration-none">Artistas</a></li>
-                <li><a href="#" class="text-white text-decoration-none">Álbumes</a></li>
-            </ul>
-            <button class="btn btn-light mt-3">Crear lista</button>
+<!-- Sidebar -->
+<div class="sidebar text-white rounded me-3">
+    <div class="d-flex align-items-center  ">
+    <h5 class="montserrat">Tu Biblioteca</h5>
+    <div class="ms-auto align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+      <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+      <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+    </svg>
+    </div>
+    </div>
+    <hr class="text-secondary">
+    <ul class="list-unstyled mt-3">
+        <li><a href="#" class="text-white text-decoration-none">Recientes</a></li>
+        <li><a href="#" class="text-white text-decoration-none">Canciones</a></li>
+        <li><a href="#" class="text-white text-decoration-none">Artistas</a></li>
+        <li><a href="#" class="text-white text-decoration-none">Álbumes</a></li>
+    </ul>
+    <button class="btn btn-light mt-3">Crear lista</button>
+</div>
+
+<!-- Contenido principal -->
+<div class="pagprinc text-white p-3 rounded position-relative">
+         <div class="d-flex align-items-center gap-4 mostrar ">
+        <h4 class="montserrat mb-4 mt-5">Canciones en tendencia</h4>
+        <p class="montserrat mb-4 mt-5 ms-auto mostrar"> mostrar todo</p>
+     </div>
+
+    <div id="carruselCanciones1" class="d-flex overflow-auto flex-nowrap pb-3">
+        <!-- 11 tarjetas -->
+        <div class="card transparente-card me-3">
+            <img src="img/ruina.png" class="card-img-top" alt="Ruina">
+            <div class="card-body">
+                <h5 class="card-text">Ruina</h5>
+                <p class="card-text">Xiyo y Fernandez</p>
+            </div>
         </div>
-
-        <!-- Contenido principal: carruseles -->
-        <div class="col pagprinc text-white p-3 rounded position-relative">
-            <h4 class="montserrat mb-4">Canciones en tendencia</h4>
-
-            <div id="carruselCanciones1" class="d-flex overflow-auto flex-nowrap pb-3">
-                <!-- Tus tarjetas de canciones -->
-                <div class="card transparente-card me-3">
-                    <img src="img/ruina.png" class="card-img-top" alt="Ruina">
-                    <div class="card-body">
-                        <h5 class="card-text">Ruina</h5>
-                        <p class="card-text">Xiyo y Fernandez</p>
-                    </div>
-                </div>
-                <div class="card transparente-card me-3">
-                    <img src="img/comvoce.jpg" class="card-img-top" alt="Com Voce">
-                    <div class="card-body">
-                        <h5 class="card-text">Com Voce</h5>
-                        <p class="card-text">Judeline, Amaia</p>
-                    </div>
-                </div>
-                <div class="card transparente-card me-3">
-                    <img src="img/ella.jpg" class="card-img-top" alt="Ella">
-                    <div class="card-body">
-                        <h5 class="card-text">Ella</h5>
-                        <p class="card-text">Zion, Bad Gyal</p>
-                    </div>
-                </div>
-                <div class="card transparente-card me-3">
-                    <img src="img/aurora.jpg" class="card-img-top" alt="Aurora">
-                    <div class="card-body">
-                        <h5 class="card-text">Aurora</h5>
-                        <p class="card-text">Mora, DeLaRose</p>
-                    </div>
-                </div>
-                <div class="card transparente-card me-3">
-                    <img src="img/rumor.png" class="card-img-top" alt="RU MOR">
-                    <div class="card-body">
-                        <h5 class="card-text">RU MOR</h5>
-                        <p class="card-text">Feid</p>
-                    </div>
-                </div>
+        <div class="card transparente-card me-3">
+            <img src="img/comvoce.jpg" class="card-img-top" alt="Com Voce">
+            <div class="card-body">
+                <h5 class="card-text">Com Voce</h5>
+                <p class="card-text">Judeline, Amaia</p>
             </div>
-
-            <!-- Botones del primer carrusel -->
-            <button class="carousel-btn-prev position-absolute top-50 start-0 translate-middle-y">
-                <!-- SVG izquierda -->
-            </button>
-            <button class="carousel-btn-next position-absolute top-50 end-0 translate-middle-y">
-                <!-- SVG derecha -->
-            </button>
-
-            <!-- Segundo carrusel: Artistas Populares -->
-            <h4 class="montserrat mb-4 mt-5">Artistas Populares</h4>
-            <div id="carruselCanciones2" class="d-flex overflow-auto flex-nowrap pb-3">
-                <!-- Tus tarjetas de artistas -->
-                <div class="card transparente-card me-3">
-                    <img src="img/ruina.png" class="card-img-top redondeo" alt="Ruina">
-                    <div class="card-body">
-                        <h5 class="card-text">Xiyo</h5>
-                        <p class="card-text">Artista</p>
-                    </div>
-                </div>
-                <div class="card transparente-card me-3">
-                    <img src="img/comvoce.jpg" class="card-img-top redondeo" alt="Com Voce">
-                    <div class="card-body">
-                        <h5 class="card-text">Amaia</h5>
-                        <p class="card-text">Artista</p>
-                    </div>
-                </div>
-                <div class="card transparente-card me-3">
-                    <img src="img/ella.jpg" class="card-img-top redondeo" alt="Ella">
-                    <div class="card-body">
-                        <h5 class="card-text">BadGyal</h5>
-                        <p class="card-text">Artista</p>
-                    </div>
-                </div>
-                <div class="card transparente-card me-3">
-                    <img src="img/aurora.jpg" class="card-img-top redondeo" alt="Aurora">
-                    <div class="card-body">
-                        <h5 class="card-text">Mora</h5>
-                        <p class="card-text">Artista</p>
-                    </div>
-                </div>
-                <div class="card transparente-card me-3">
-                    <img src="img/rumor.png" class="card-img-top redondeo" alt="RU MOR">
-                    <div class="card-body">
-                        <h5 class="card-text">Feid</h5>
-                        <p class="card-text">Artista</p>
-                    </div>
-                </div>
+        </div>
+        <div class="card transparente-card me-3">
+            <img src="img/ella.jpg" class="card-img-top" alt="Ella">
+            <div class="card-body">
+                <h5 class="card-text">Ella</h5>
+                <p class="card-text">Zion, Bad Gyal</p>
             </div>
+        </div>
+        <div class="card transparente-card me-3">
+            <img src="img/aurora.jpg" class="card-img-top" alt="Aurora">
+            <div class="card-body">
+                <h5 class="card-text">Aurora</h5>
+                <p class="card-text">Mora, DeLaRose</p>
+            </div>
+        </div>
+        <div class="card transparente-card me-3">
+            <img src="img/rumor.png" class="card-img-top" alt="RU MOR">
+            <div class="card-body">
+                <h5 class="card-text">RU MOR</h5>
+                <p class="card-text">Feid</p>
+            </div>
+        </div>
+        <div class="card transparente-card me-3">
+            <img src="img/rumor.png" class="card-img-top" alt="RU MOR">
+            <div class="card-body">
+                <h5 class="card-text">RU MOR</h5>
+                <p class="card-text">Feid</p>
+            </div>
+        </div>
+        <div class="card transparente-card me-3">
+            <img src="img/ruina.png" class="card-img-top" alt="Ruina2">
+            <div class="card-body">
+                <h5 class="card-text">Ruina 2</h5>
+                <p class="card-text">Xiyo</p>
+            </div>
+        </div>
+        <div class="card transparente-card me-3">
+            <img src="img/comvoce.jpg" class="card-img-top" alt="Com Voce2">
+            <div class="card-body">
+                <h5 class="card-text">Com Voce 2</h5>
+                <p class="card-text">Amaia</p>
+            </div>
+        </div>
+        <div class="card transparente-card me-3">
+            <img src="img/ella.jpg" class="card-img-top" alt="Ella2">
+            <div class="card-body">
+                <h5 class="card-text">Ella 2</h5>
+                <p class="card-text">Bad Gyal</p>
+            </div>
+        </div>
+        <div class="card transparente-card me-3">
+            <img src="img/aurora.jpg" class="card-img-top" alt="Aurora2">
+            <div class="card-body">
+                <h5 class="card-text">Aurora 2</h5>
+                <p class="card-text">Mora</p>
+            </div>
+        </div>
+        <div class="card transparente-card me-3">
+            <img src="img/rumor.png" class="card-img-top" alt="RU MOR2">
+            <div class="card-body">
+                <h5 class="card-text">RU MOR 2</h5>
+                <p class="card-text">Feid</p>
+            </div>
+        </div>
+    </div>
 
-            <!-- Botones del segundo carrusel -->
-            <button class="carousel-btn-prev position-absolute top-50 start-0 translate-middle-y">
-                <!-- SVG izquierda -->
-            </button>
-            <button class="carousel-btn-next position-absolute top-50 end-0 translate-middle-y">
-                <!-- SVG derecha -->
-            </button>
+    <!-- Segundo carrusel: Artistas Populares -->
+     <div class="d-flex align-items-center gap-4 ">
+        <h4 class="montserrat mb-4 mt-5 mostrar">Artistas Populares</h4>
+        <p class="montserrat mb-4 mt-5 ms-auto mostrar"> mostrar todo</p>
+     </div>
+    <div id="carruselCanciones2" class="d-flex overflow-auto flex-nowrap pb-3">
+        <!-- Tarjetas de artistas -->
+        <div class="card transparente-card me-3">
+            <img src="img/ruina.png" class="card-img-top redondeo" alt="Xiyo">
+            <div class="card-body">
+                <h5 class="card-text">Xiyo</h5>
+                <p class="card-text">Artista</p>
+            </div>
+        </div>
+        <div class="card transparente-card me-3">
+            <img src="img/comvoce.jpg" class="card-img-top redondeo" alt="Amaia">
+            <div class="card-body">
+                <h5 class="card-text">Amaia</h5>
+                <p class="card-text">Artista</p>
+            </div>
+        </div>
+        <div class="card transparente-card me-3">
+            <img src="img/ella.jpg" class="card-img-top redondeo" alt="BadGyal">
+            <div class="card-body">
+                <h5 class="card-text">BadGyal</h5>
+                <p class="card-text">Artista</p>
+            </div>
+        </div>
+        <div class="card transparente-card me-3">
+            <img src="img/aurora.jpg" class="card-img-top redondeo" alt="Mora">
+            <div class="card-body">
+                <h5 class="card-text">Mora</h5>
+                <p class="card-text">Artista</p>
+            </div>
+        </div>
+        <div class="card transparente-card me-3">
+            <img src="img/rumor.png" class="card-img-top redondeo" alt="Feid">
+            <div class="card-body">
+                <h5 class="card-text">Feid</h5>
+                <p class="card-text">Artista</p>
+            </div>
+        </div>
+                <div class="card transparente-card me-3">
+            <img src="img/rumor.png" class="card-img-top redondeo" alt="Feid">
+            <div class="card-body">
+                <h5 class="card-text">Feid</h5>
+                <p class="card-text">Artista</p>
+            </div>
+        </div>
+                <div class="card transparente-card me-3">
+            <img src="img/rumor.png" class="card-img-top redondeo" alt="Feid">
+            <div class="card-body">
+                <h5 class="card-text">Feid</h5>
+                <p class="card-text">Artista</p>
+            </div>
+        </div>
+                <div class="card transparente-card me-3">
+            <img src="img/rumor.png" class="card-img-top redondeo" alt="Feid">
+            <div class="card-body">
+                <h5 class="card-text">Feid</h5>
+                <p class="card-text">Artista</p>
+            </div>
+        </div>
+                <div class="card transparente-card me-3">
+            <img src="img/rumor.png" class="card-img-top redondeo" alt="Feid">
+            <div class="card-body">
+                <h5 class="card-text">Feid</h5>
+                <p class="card-text">Artista</p>
+            </div>
+        </div>
+    </div>
+    <!--3 Carrusel con Albumenes y sencillos populares-->
+              <div class="d-flex align-items-center gap-4 ">
+        <h4 class="montserrat mb-4 mt-5 mostrar">Albumes y sencillos populares</h4>
+        <p class="montserrat mb-4 mt-5 ms-auto mostrar"> mostrar todo</p>
+     </div>
+     <div id="carruselCanciones1" class="d-flex overflow-auto flex-nowrap pb-3">
+        <!-- 11 tarjetas -->
+        <div class="card transparente-card me-3">
+            <img src="img/ruina.png" class="card-img-top" alt="Ruina">
+            <div class="card-body">
+                <h5 class="card-text">Ruina</h5>
+                <p class="card-text">Xiyo y Fernandez</p>
+            </div>
+        </div>
+        <div class="card transparente-card me-3">
+            <img src="img/comvoce.jpg" class="card-img-top" alt="Com Voce">
+            <div class="card-body">
+                <h5 class="card-text">Com Voce</h5>
+                <p class="card-text">Judeline, Amaia</p>
+            </div>
+        </div>
+        <div class="card transparente-card me-3">
+            <img src="img/ella.jpg" class="card-img-top" alt="Ella">
+            <div class="card-body">
+                <h5 class="card-text">Ella</h5>
+                <p class="card-text">Zion, Bad Gyal</p>
+            </div>
+        </div>
+        <div class="card transparente-card me-3">
+            <img src="img/aurora.jpg" class="card-img-top" alt="Aurora">
+            <div class="card-body">
+                <h5 class="card-text">Aurora</h5>
+                <p class="card-text">Mora, DeLaRose</p>
+            </div>
+        </div>
+        <div class="card transparente-card me-3">
+            <img src="img/rumor.png" class="card-img-top" alt="RU MOR">
+            <div class="card-body">
+                <h5 class="card-text">RU MOR</h5>
+                <p class="card-text">Feid</p>
+            </div>
+        </div>
+        <div class="card transparente-card me-3">
+            <img src="img/rumor.png" class="card-img-top" alt="RU MOR">
+            <div class="card-body">
+                <h5 class="card-text">RU MOR</h5>
+                <p class="card-text">Feid</p>
+            </div>
+        </div>
+        <div class="card transparente-card me-3">
+            <img src="img/ruina.png" class="card-img-top" alt="Ruina2">
+            <div class="card-body">
+                <h5 class="card-text">Ruina 2</h5>
+                <p class="card-text">Xiyo</p>
+            </div>
+        </div>
+        <div class="card transparente-card me-3">
+            <img src="img/comvoce.jpg" class="card-img-top" alt="Com Voce2">
+            <div class="card-body">
+                <h5 class="card-text">Com Voce 2</h5>
+                <p class="card-text">Amaia</p>
+            </div>
+        </div>
+        <div class="card transparente-card me-3">
+            <img src="img/ella.jpg" class="card-img-top" alt="Ella2">
+            <div class="card-body">
+                <h5 class="card-text">Ella 2</h5>
+                <p class="card-text">Bad Gyal</p>
+            </div>
+        </div>
+        <div class="card transparente-card me-3">
+            <img src="img/aurora.jpg" class="card-img-top" alt="Aurora2">
+            <div class="card-body">
+                <h5 class="card-text">Aurora 2</h5>
+                <p class="card-text">Mora</p>
+            </div>
+        </div>
+        <div class="card transparente-card me-3">
+            <img src="img/rumor.png" class="card-img-top" alt="RU MOR2">
+            <div class="card-body">
+                <h5 class="card-text">RU MOR 2</h5>
+                <p class="card-text">Feid</p>
+            </div>
         </div>
     </div>
 </div>
@@ -138,6 +286,7 @@
 <script defer src="paginacarrusel/paginacarrusel.js"></script>
 </body>
 </html>
+
 
 
 
