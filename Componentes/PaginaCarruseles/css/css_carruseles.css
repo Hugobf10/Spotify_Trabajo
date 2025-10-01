@@ -4,43 +4,102 @@ body {
     margin: 0;
     overflow-x: hidden; /* evita scroll horizontal */
 }
+/* Scroll estilo Spotify global */
+::-webkit-scrollbar {
+    height: 8px;       /* grosor horizontal */
+    width: 8px;        /* grosor vertical */
+    background: transparent; /* carril transparente */
+    display: none;      /* oculto por defecto */
+}
 
-/* Sidebar fijo */
+/* Al pasar el ratón sobre un contenedor con scroll, aparece la barra */
+*:hover::-webkit-scrollbar {
+    display: block;
+}
+
+/* Thumb (barra que se mueve) */
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+/* Thumb al pasar el ratón encima */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+
+/* Sidebar dividido en top scroll y bottom fijo */
 .sidebar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 375px;        /* ancho del sidebar */
+    width: 375px;        
     height: 100vh;
     background:#2c2c2c;
     color: white;
     padding: 1.5rem;
     border-radius: 0 15px 15px 0;
     z-index: 100;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* Parte superior con scroll */
+.sidebar-top {
+    flex: 1; /* ocupa el espacio disponible */
+    overflow-y: auto;
+    margin-bottom: 1rem;
+}
+
+/* Parte inferior fija */
+.sidebar-bottom {
+    font-size: 0.8rem;
+    color: #bbb;
+}
+
+/* Burbuja dentro del sidebar */
+.burbuja {
+    width: 95%;
+    background-color: #454645;
+    padding: 16px;             
+    border-radius: 0 15px 15px 0;
+    margin-bottom: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.burbuja p {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.burbuja button {
+    align-self: flex-start;
+    margin-top: 8px;
+    padding: 5px 12px;
+    font-size: 0.8rem;
+    border-radius: 12px;
 }
 
 /* Contenido principal */
 .pagprinc {
     border-radius: 0 15px 15px 0;
-    margin-left: 375px;   /* espacio suficiente para el sidebar */
+    margin-left: 375px;   /* deja espacio para el sidebar */
     padding: 2rem;
     min-height: 100vh;
     background: linear-gradient(to top, #000000, #454645);
 }
 
-.sidebar h5, .sidebar h6 {
-    margin-bottom: 0.5rem;
-}
-
-.sidebar ul li {
-    margin-bottom: 0.5rem;
-}
-
-
 /* Carruseles */
-#carruselCanciones1, #carruselCanciones2 {
+#carruselCanciones1, #carruselCanciones2, #carruselCanciones3 {
     display: flex;
-    overflow-x: auto;              /* solo horizontal */
+    overflow-x: auto;   
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
@@ -49,15 +108,17 @@ body {
 }
 
 #carruselCanciones1::-webkit-scrollbar, 
-#carruselCanciones2::-webkit-scrollbar {
-    display: none; /* oculta scrollbar */
+#carruselCanciones2::-webkit-scrollbar,
+#carruselCanciones3::-webkit-scrollbar {
+    display: none;
 }
 
-/* Tarjetas del carrusel */
+/* Tarjetas */
 #carruselCanciones1 .card,
-#carruselCanciones2 .card {
+#carruselCanciones2 .card,
+#carruselCanciones3 .card {
     flex: 0 0 auto;
-    width: 10rem; /* ancho fijo */
+    width: 10rem;
     scroll-snap-align: start;
     border-radius: 15px;
     overflow: hidden;
@@ -65,56 +126,43 @@ body {
     border: none;
 }
 
-/* Imágenes cuadradas y circulares */
-#carruselCanciones1 .card-img-top {
+/* Imagen cuadrada */
+#carruselCanciones1 .card-img-top,
+#carruselCanciones3 .card-img-top {
     width: 100%;
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 15px;
 }
-img{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
 
+/* Imagen circular */
 #carruselCanciones2 .card-img-top.redondeo {
     width: 100%;
     aspect-ratio: 1/1;
     object-fit: cover;
-    border-radius: 50%; /* círculo perfecto */
+    border-radius: 50%;
 }
 
-/* Texto de tarjetas */
-#carruselCanciones1 .card-body,
-#carruselCanciones2 .card-body {
-    padding: 0.5rem;
-    color: white;
-}
-
-/* Hover en tarjetas */
+/* Efecto hover */
 .transparente-card {
-    background-color: rgba(255, 255, 255, 0); /* sin fondo por defecto */
+    background-color: rgba(255, 255, 255, 0);
     border: none;
-    transition: background-color 0.3s, transform 0.3s; /* transición suave */
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .transparente-card:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* fondo semi-transparente al pasar el ratón */
-    transform: scale(1.05); /* ligero zoom al pasar el ratón */
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+}
+.card-text{
+    color: white;
 }
 
-.card-text:hover{
-    text-decoration: underline;
-}
-.contenedorlado{
-    gap: 1rem;
-    display: flex;
-    align-items: center;
-}
-.mostrar:hover{
+.card-text:hover {
     text-decoration: underline;
 }
 
-/* Botones del carrusel */
+/* Botones de navegación carrusel */
 .carousel-btn-prev, .carousel-btn-next {
     background: rgba(235, 231, 231, 0.5);
     border-radius: 50%;
@@ -128,26 +176,12 @@ img{
     z-index: 10;
 }
 
-/* Responsividad */
+/* Responsivo */
 @media (max-width: 576px) {
-    #carruselCanciones1 .card,
-    #carruselCanciones2 .card { width: 8rem; }
-    .sidebar{
-        display:none
-    }
-    .pagprinc{
-        margin-left: 0;
-        padding: 1rem;
-    }
+    .sidebar { display: none; }
+    .pagprinc { margin-left: 0; padding: 1rem; }
 }
-@media (min-width: 577px) and (max-width: 992px) {
-    #carruselCanciones1 .card,
-    #carruselCanciones2 .card { width: 9rem; }
-}
-@media (min-width: 993px) {
-    #carruselCanciones1 .card,
-    #carruselCanciones2 .card { width: 10rem; }
-}
+
 
 
 

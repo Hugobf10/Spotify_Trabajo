@@ -18,35 +18,59 @@
 
 <!-- Sidebar -->
 <div class="sidebar text-white rounded me-3">
-    <div class="d-flex align-items-center  ">
-    <h5 class="montserrat">Tu Biblioteca</h5>
-    <div class="ms-auto align-items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
-      <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-      <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
-    </svg>
+            <div class="d-flex align-items-center">
+            <p class="montserrat p-2"><strong>Tu Biblioteca</strong></p>
+            <div class="ms-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
+                     fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                  <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                </svg>
+            </div>
+        </div>
+    
+    <!-- Parte superior scrollable -->
+    <div class="sidebar-top">
+
+        <!-- Burbujas dentro de la parte superior -->
+        <div class="burbuja text-white rounded me-3">
+            <p class="montserrat"><strong>Crea Tu Primera lista</strong></p>
+            <p class="montserrat" style="font-size: small;">Es muy fácil, y te echaremos una mano</p>
+            <button class="btn btn-light"><strong>Crear lista</strong></button>
+        </div>
+
+        <div class="burbuja text-white rounded me-3">
+            <p class="montserrat"><strong>Encuentra podcast que quieras seguir</strong></p>
+            <p class="montserrat" style="font-size: small;">te avisaremos cuando salgan nuevos capitulos</p>
+            <button class="btn btn-light"><strong>Explorar pódcast</strong></button>
+        </div>
     </div>
+
+    <!-- Parte inferior fija -->
+    <div class="sidebar-bottom">
+        <div class="border-bottom my-2"></div>
+        <p>Legal</p>
+        <p>Centro de seguridad y privacidad</p>
+        <p>Política de Privacidad</p>
+        <p>Configuración de cookies</p>
+        <p>Información sobre los anuncios</p>
+        <p>Accesibilidad</p>
+        <p>Cookies</p>
+        <button class="btn btn-outline-light btn-sm mt-2">Español de España</button>
     </div>
-    <hr class="text-secondary">
-    <ul class="list-unstyled mt-3">
-        <li><a href="#" class="text-white text-decoration-none">Recientes</a></li>
-        <li><a href="#" class="text-white text-decoration-none">Canciones</a></li>
-        <li><a href="#" class="text-white text-decoration-none">Artistas</a></li>
-        <li><a href="#" class="text-white text-decoration-none">Álbumes</a></li>
-    </ul>
-    <button class="btn btn-light mt-3">Crear lista</button>
 </div>
 
 <!-- Contenido principal -->
 <div class="pagprinc text-white p-3 rounded position-relative">
-         <div class="d-flex align-items-center gap-4 mostrar ">
+    <!-- Carrusel 1 -->
+    <div class="d-flex align-items-center gap-4 mostrar">
         <h4 class="montserrat mb-4 mt-5">Canciones en tendencia</h4>
-        <p class="montserrat mb-4 mt-5 ms-auto mostrar"> mostrar todo</p>
-     </div>
+        <p class="montserrat mb-4 mt-5 ms-auto mostrar">Mostrar todo</p>
+    </div>
 
     <div id="carruselCanciones1" class="d-flex overflow-auto flex-nowrap pb-3">
-        <!-- 11 tarjetas -->
-        <div class="card transparente-card me-3">
+        <!-- tarjetas aquí... -->
+          <div class="card transparente-card me-3">
             <img src="img/ruina.png" class="card-img-top" alt="Ruina">
             <div class="card-body">
                 <h5 class="card-text">Ruina</h5>
@@ -125,14 +149,15 @@
         </div>
     </div>
 
-    <!-- Segundo carrusel: Artistas Populares -->
-     <div class="d-flex align-items-center gap-4 ">
+    <!-- Carrusel 2 -->
+    <div class="d-flex align-items-center gap-4 ">
         <h4 class="montserrat mb-4 mt-5 mostrar">Artistas Populares</h4>
-        <p class="montserrat mb-4 mt-5 ms-auto mostrar"> mostrar todo</p>
-     </div>
+        <p class="montserrat mb-4 mt-5 ms-auto mostrar">Mostrar todo</p>
+    </div>
+
     <div id="carruselCanciones2" class="d-flex overflow-auto flex-nowrap pb-3">
-        <!-- Tarjetas de artistas -->
-        <div class="card transparente-card me-3">
+        <!-- tarjetas aquí... -->
+          <div class="card transparente-card me-3">
             <img src="img/ruina.png" class="card-img-top redondeo" alt="Xiyo">
             <div class="card-body">
                 <h5 class="card-text">Xiyo</h5>
@@ -195,15 +220,18 @@
                 <p class="card-text">Artista</p>
             </div>
         </div>
+
     </div>
-    <!--3 Carrusel con Albumenes y sencillos populares-->
-              <div class="d-flex align-items-center gap-4 ">
-        <h4 class="montserrat mb-4 mt-5 mostrar">Albumes y sencillos populares</h4>
-        <p class="montserrat mb-4 mt-5 ms-auto mostrar"> mostrar todo</p>
-     </div>
-     <div id="carruselCanciones1" class="d-flex overflow-auto flex-nowrap pb-3">
-        <!-- 11 tarjetas -->
-        <div class="card transparente-card me-3">
+
+    <!-- Carrusel 3 -->
+    <div class="d-flex align-items-center gap-4 ">
+        <h4 class="montserrat mb-4 mt-5 mostrar">Álbumes y sencillos populares</h4>
+        <p class="montserrat mb-4 mt-5 ms-auto mostrar">Mostrar todo</p>
+    </div>
+
+    <div id="carruselCanciones3" class="d-flex overflow-auto flex-nowrap pb-3">
+        <!-- tarjetas aquí... -->
+          <div class="card transparente-card me-3">
             <img src="img/ruina.png" class="card-img-top" alt="Ruina">
             <div class="card-body">
                 <h5 class="card-text">Ruina</h5>
@@ -286,8 +314,3 @@
 <script defer src="paginacarrusel/paginacarrusel.js"></script>
 </body>
 </html>
-
-
-
-
-
