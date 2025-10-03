@@ -1,3 +1,79 @@
-body {
-    font-family: 'Montserrat', sans-serif;
+footer {
+    height: 82px;
+    background: linear-gradient(90deg, #B33BA6, #A32A96, #A941B0, #8466D9, #5F96DE, #77A4ED);
+    border: 8px solid black;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+.container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+
+p {
+    margin-bottom: 0.2rem;
+    word-wrap: break-word;
+    line-height: 1;
+    margin-top: 5px;
+
+}
+
+.frase1 {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.frase2 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Estilos para pantallas medianas (tabletas) */
+@media (max-width: 992px) {
+    .frase1 {
+        font-size: 12px;
+    }
+
+    .frase2 {
+        font-size: 14px;
+    }
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 576px) {
+    footer {
+        height: auto;
+        padding: 1rem;
+    }
+
+    .frase1 {
+        font-size: 11px;
+    }
+
+    .frase2 {
+        font-size: 13px;
+    }
+}
+
+.boton {
+    display: flex;
+    margin-top: 2px;
+    /* margin-left: auto permite que el contenedor ocupe todo el espacio disponible hacia la izquierda y se pegue a la derecha */
+    margin-left: auto;
+    /* margin-right controla cuánto espacio hay entre este contenedor y el borde derecho */
+    margin-right: 23px;
+    /* modifica este valor para moverlo más o menos hacia la izquierda */
+}
+
+.boton button {
+    padding: 6px 12px;
+    font-size: 15px;
+    height: 47px;
+    width: 200px;
+    border-radius: 50px;
+    background-color: white !important;
+    color: black !important;
+    font-weight: bold;
 }

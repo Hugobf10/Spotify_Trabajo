@@ -1,14 +1,15 @@
+/* Cabecera principal */
 .cabecera {
-    background-color: black; /* Color fondo */
+    background-color: black;
     height: 65px;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* espacia logo y círculo */
-    padding:  20px; /* espacio lateral */
+    justify-content: space-between;
+    padding: 0 20px;
     position: relative;
 }
 
-/* Logo principal */
+/* Logo */
 .imgLogo {
     height: 45px;
     cursor: pointer;
@@ -16,105 +17,255 @@
 
 /* Logo móvil */
 .imgLogoEntero {
-    height: 30px;
+    height: 25px;
 }
 
-/* Cículo con la casa y buscador */
+/* Contenedor de casa + buscador */
+.circulo-buscador {
+    position: absolute;
+    top: 50%;
+    left: 36%; /* ajusta este valor para mover la casa más a la izquierda del centro */
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    display: inline-flex
+}
+
+/* Ícono de casa (círculo) */
 .circulo {
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  background-color: #2B2B2B;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color: #2B2B2B;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    flex-shrink: 0;
+    color: white;
 }
 
 .circulo:hover {
-  transform: scale(1.05); /* agranda un 10% */
-  background-color: #3a3a3a;
+    transform: scale(1.05);
+    background-color: #3a3a3a;
 }
 
-/* Buscador */.buscador {
-  width: 350px;       /* largo horizontal */
-  max-width: 100%;
+/* Buscador */
+.buscador {
+    width: 480px; /* Tamaño por defecto */
+    transition: width 0.3s ease;
+    margin-right: 10px;
+    /* IMPORTANTE: este hace que el input se alargue solo hacia la derecha */
 }
 
+/* Responsive */
 @media (max-width: 1024px) {
-  .buscador {
-    width: 250px; /* más pequeño en tablets */
-  }
+    .buscador {
+        width: 250px;
+    }
 }
-
 @media (max-width: 768px) {
-  .buscador {
-    width: 180px; /* aún más pequeño en móviles */
-  }
+    .buscador {
+        width: 180px;
+    }
 }
 
-
+/* Grupo del input */
 .buscador .input-group {
-  border-radius: 25px; /* bordes redondeados */
-  overflow: hidden;
-  height: 45px;        /* más alto */
+    border-radius: 25px;
+    overflow: hidden;
+    height: 45px;
+    background-color: #2B2B2B;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+    width: 100%;
 }
 
+/* Al enfocar el input, borde blanco */
+.buscador .input-group:focus-within {
+    border-color: white;
+}
+
+/* Lupa */
 .buscador .input-group-text {
-  background-color: #2B2B2B;
-  border: none;
-  color: white;
-  display: flex;
-  align-items: center;
+    background-color: #2B2B2B;
+    border: none;
+    color: #aaa;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    font-size: 20px;
+    padding: 0 8px;
 }
+
+/* Input */
 .buscador input {
-  background-color: #2B2B2B;
-  border: none;
-  color: white;
-  border-radius: 25px;
-  transition: transform 0.3s ease, background-color 0.3s ease; /* transición suave */
+    background-color: #2B2B2B !important;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    width: 100%;
+    padding-left: 5px;
 }
 
-/* Hover solo para el input */
-.buscador input:hover {
-  transform: scale(1.05);          /* agranda un poco */
-  background-color: #3a3a3a;       /* se ilumina un poco */
-}
-
+/* Placeholder */
 .buscador input::placeholder {
-  color: #aaa;
+    color: #aaa;
 }
 
-.buscador input:focus {
-  outline: none;
-  box-shadow: none;
-}
-
-/* Transiciones para todo el buscador */
-.buscador .input-group {
-  transition: transform 0.3s ease, background-color 0.3s ease; /* igual que la casita */
-}
-
-.buscador .input-group:hover {
-   border: 2px solid rgba(255, 255, 255, 0.4); /* borde blanco sutil */
-}
-
-/* Cambiar fondo al input y a la lupa al pasar el ratón */
+/* Hover sobre input y lupa */
 .buscador .input-group:hover input,
 .buscador .input-group:hover .input-group-text {
-  background-color: #3a3a3a;
-  transition: background-color 0.3s ease; /* suave como la casita */
+    background-color: #3a3a3a !important;
 }
 
+/* Hover borde sutil */
+.buscador .input-group:hover {
+    border-color: rgba(255, 255, 255, 0.1);
+}
 
-.circulo-buscador {
-  position: absolute;
-  left: 30%;               /* posición horizontal central */
-  top: 30%;                /* posición vertical en la cabecera */
-  transform: translate(-50%, -50%); /* centra exactamente */
+/* Focus input */
+.buscador input:focus {
+    outline: none;
+    box-shadow: none;
+    color: white !important;
+}
+
+.buscador .input-group:focus-within {
+    border-color: white;
+}
+
+.palabras {
+  display: flex;
+  gap: 5px;              /* Espacio entre palabras */
+  align-items: center;    /* Alineación vertical si lo pones en una cabecera */
+}
+
+.palabras span {
+  color: #aaa;            /* Gris claro por defecto */
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.palabras span:hover {
+  color: white;           /* Se vuelve blanco al pasar el mouse */
+}
+
+.linea{
+  width: 1px;
+  height: 30px;
+  background-color: white;
+  margin-left: 25px;
+}
+
+.flecha{
   display: flex;
   align-items: center;
-  left: 47%;
-  padding-top: 25px;
+  cursor: pointer;
+  gap: 8px; /* Espacio entre la flecha y la palabra */
+  transition: color 0.3s ease;
+  margin-left: 35px;
 }
+
+.flecha svg{
+  color: #aaa;
+  transition: color 0.3s ease;
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.7));
+}
+
+.flecha-palabra{
+  color: #aaa;
+  font-size: 14px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.flecha:hover svg, 
+.flecha:hover .flecha-palabra{
+  color: white;
+}
+
+.registrarte{
+  display: flex;
+  align-items: center; 
+  margin-left: 30px;
+}
+
+.registrarte span {
+  color: #aaa;            /* Gris claro por defecto */
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.registrarte span:hover {
+  color: white;           /* Se vuelve blanco al pasar el mouse */
+}
+
+.btn-hover-grow {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.btn-hover-grow:hover {
+  transform: scale(1.05);
+  font-weight: bold;
+}
+
+.btn-oval {
+  border-radius: 25px;               /* Forma ovalada */
+  padding: 12px 33px;                 /* Espaciado horizontal más amplio */
+  color: black;                      /* Texto negro */
+  background-color: white !important; /* Blanco siempre */
+  border: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.btn-oval:hover {
+  transform: scale(1.02);            /* Agranda un poco */
+  font-weight: bold;                 /* Texto en negrita */
+  background-color: white !important; /* Evita oscurecer al pasar el mouse */
+  color: black;                      /* Asegura que el texto no cambie de color */
+}
+
+.boton-movil {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      /* margin-left: auto permite que el contenedor ocupe todo el espacio disponible hacia la izquierda y se pegue a la derecha */
+      margin-left: auto;
+      /* margin-right controla cuánto espacio hay entre este contenedor y el borde derecho */
+      margin-right: -25px;  /* modifica este valor para moverlo más o menos hacia la izquierda */
+    }
+
+.boton-movil button {
+  padding: 6px 12px;
+  font-size: 11px;
+  height: 28px;
+  min-width: 85px;
+  border-radius: 20px;
+  background-color: white !important;
+  color: black !important;
+  font-weight: bold;
+}
+
+.menu svg {
+  fill: white;
+  width: 20px;
+  height: 20px;
+  margin-top: -3px;
+}
+
+
+
+
+
+
+
+
