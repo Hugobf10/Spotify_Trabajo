@@ -36,7 +36,7 @@ body {
     left: 0;
     width: 375px;        
     height: 100vh;
-    background:#2c2c2c;
+    background:rgb(18, 18, 18);
     color: white;
     padding: 1.5rem;
     border-radius: 0 15px 15px 0;
@@ -55,8 +55,11 @@ body {
 
 /* Parte inferior fija */
 .sidebar-bottom {
-    font-size: 0.8rem;
+    font-size: 0.5rem;
     color: #bbb;
+}
+.sidebar-bottom:hover{
+    text-decoration: underline;
 }
 
 /* Burbuja dentro del sidebar */
@@ -93,7 +96,17 @@ body {
     margin-left: 375px;   /* deja espacio para el sidebar */
     padding: 2rem;
     min-height: 100vh;
-    background: linear-gradient(to top, #000000, #454645);
+    background: linear-gradient(
+    180deg,
+    rgba(32, 32, 32, 1) 0%,     /* gris al inicio */
+    rgba(28, 28, 28, 1) 50%,    /* gris más oscuro, empieza el difuminado */
+    rgba(22, 22, 22, 75%),      /* gris casi negro, transición suave */
+    rgba(18, 18, 18, 1) 100%    /* negro total al final */
+);
+
+
+
+
 }
 
 /* Carruseles */
@@ -161,6 +174,9 @@ body {
 .card-text:hover {
     text-decoration: underline;
 }
+.mostrar:hover{
+    text-decoration: underline;
+}
 
 /* Botones de navegación carrusel */
 .carousel-btn-prev, .carousel-btn-next {
@@ -175,6 +191,41 @@ body {
     cursor: pointer;
     z-index: 10;
 }
+/* Contenedor de la tarjeta */
+.card {
+    position: relative; /* necesario para el botón encima */
+}
+
+/* Botón de reproducir */
+.card .play-btn {
+    position: absolute;
+    top: 45%;
+    left: 75%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background-color: #1ed760;       /* verde Spotify */
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    opacity: 0;                       /* invisible por defecto */
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+
+/* Mostrar el botón solo al pasar el ratón sobre la tarjeta */
+.card:hover .play-btn {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: auto;             /* activo solo al hacer hover */
+}
+
 
 /* Responsivo */
 @media (max-width: 576px) {
