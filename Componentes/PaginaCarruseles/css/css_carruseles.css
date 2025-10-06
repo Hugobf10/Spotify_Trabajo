@@ -34,12 +34,12 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 375px;        
+    width: 485px;        
     height: 100vh;
     background:rgb(18, 18, 18);
     color: white;
     padding: 1.5rem;
-    border-radius: 0 15px 15px 0;
+    border-radius: 0 20px 20px 0;
     z-index: 100;
 
     display: flex;
@@ -65,7 +65,7 @@ body {
 /* Burbuja dentro del sidebar */
 .burbuja {
     width: 95%;
-    background-color: #454645;
+    background-color: rgba(31, 31, 31);
     padding: 16px;             
     border-radius: 0 15px 15px 0;
     margin-bottom: 1rem;
@@ -92,15 +92,15 @@ body {
 
 /* Contenido principal */
 .pagprinc {
-    border-radius: 0 15px 15px 0;
-    margin-left: 375px;   /* deja espacio para el sidebar */
+    border-radius: 0 20px 20px 0;
+    margin-left: 495px;   /* deja espacio para el sidebar */
     padding: 2rem;
     min-height: 100vh;
     background: linear-gradient(
     180deg,
     rgba(32, 32, 32, 1) 0%,     /* gris al inicio */
-    rgba(28, 28, 28, 1) 50%,    /* gris más oscuro, empieza el difuminado */
-    rgba(22, 22, 22, 75%),      /* gris casi negro, transición suave */
+    rgba(28, 28, 28, 1) 15%,    /* gris más oscuro, empieza el difuminado */
+    rgba(22, 22, 22, 65%),      /* gris casi negro, transición suave */
     rgba(18, 18, 18, 1) 100%    /* negro total al final */
 );
 
@@ -161,14 +161,22 @@ body {
     background-color: rgba(255, 255, 255, 0);
     border: none;
     transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
 }
 
 .transparente-card:hover {
     background-color: rgba(255, 255, 255, 0.1);
-    transform: scale(1.05);
 }
 .card-text{
     color: white;
+}
+.card-text.titulo{
+    font-size: medium;
+    color: rgb(231, 231, 231);
+}
+.card-text.des{
+    font-size: 14px;
+    color: rgba(163, 163, 163);
 }
 
 .card-text:hover {
