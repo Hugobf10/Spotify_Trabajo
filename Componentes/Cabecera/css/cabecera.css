@@ -223,15 +223,14 @@
   background-color: white !important; /* Blanco siempre */
   border: none;
   transition: transform 0.3s ease, color 0.3s ease;
-  font-weight: 500;
+  font-weight: 650;
   margin-left: 5px;
 }
 
 .btn-oval:hover {
   transform: scale(1.02);            /* Agranda un poco */
-  font-weight: bold;                 /* Texto en negrita */
-  background-color: white !important; /* Evita oscurecer al pasar el mouse */
-  color: black;                      /* Asegura que el texto no cambie de color */
+  font-weight: 700;                 /* Texto en negrita */
+  background-color: #F2F2F2 !important;
 }
 
 .boton-movil {
