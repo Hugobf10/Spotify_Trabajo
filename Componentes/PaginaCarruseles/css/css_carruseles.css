@@ -4,6 +4,9 @@ body {
     margin: 0;
     overflow-x: hidden; /* evita scroll horizontal */
 }
+p{
+    color: white;
+}
 /* Scroll estilo Spotify global */
 ::-webkit-scrollbar {
     height: 8px;       /* grosor horizontal */
@@ -175,6 +178,10 @@ body {
     color: rgb(231, 231, 231);
 }
 .card-text.des{
+    font-size: 14px;
+    color: rgba(163, 163, 163);
+}
+.des{
     font-size: 14px;
     color: rgba(163, 163, 163);
 }
