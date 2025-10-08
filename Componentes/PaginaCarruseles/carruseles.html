@@ -8,106 +8,18 @@
 
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
-<!-- CSS combinado -->
-<link rel="stylesheet" href="Componentes/PaginaCarruseles/css/css_carruseles.css">
-<link rel="stylesheet" href="Componentes/Cabecera/css/cabecera.css">
-<link rel="stylesheet" href="Componentes/Biblioteca/css/biblioteca.css">
+<!-- CSS propio -->
+<link rel="stylesheet" href="css/css_carruseles.css">
 </head>
 <body>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        crossorigin="anonymous"></script>
-
-    <div class="container-fluid cabecera">
-        <div class="row align-items-center w-100">
-
-            <!-- Logo -->
-            <div class="col-auto">
-                <!-- Logo escritorio -->
-                <img src="img/spotify_Logo.png" alt="Logo" class="d-none d-lg-block imgLogo" data-bs-toggle="tooltip"
-                    data-bs-placement="bottom" title="Spotify" />
-                <!-- Logo móvil -->
-                <img src="img/Spotify_Logo_entero.png" alt="Logo con nombre" class="d-block d-lg-none imgLogoEntero" />
-            </div>
-
-            <!-- Casa + buscador + palabras -->
-            <div class="col d-flex align-items-center d-none d-lg-flex">
-                <div class="circulo-buscador d-flex align-items-center">
-
-                    <!-- Círculo con la casa -->
-                    <div class="rounded-circle circulo me-1 d-flex justify-content-center align-items-center"
-                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="Inicio">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
-                            class="bi bi-house" viewBox="0 0 16 16">
-                            <path
-                                d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
-                        </svg>
-                    </div>
-
-                    <!-- Buscador -->
-                    <div class="buscador ms-1">
-                        <div class="input-group">
-                            <span class="input-group-text"><i class="bi bi-search"></i></span>
-                            <input type="text" class="form-control" placeholder="¿Qué quieres reproducir?" />
-                        </div>
-                    </div>
-
-                    <!-- Palabras -->
-                    <div class="palabras">
-                        <span>Premium</span>
-                        <span>Asistencia</span>
-                        <span>Descargar</span>
-                    </div>
-
-                    <!-- Línea vertical -->
-                    <div class="linea"></div>
-
-                    <!-- Icono flecha e instalar -->
-                    <div class="flecha">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z" />
-                        </svg>
-                        <span class="flecha-palabra">Instalar app</span>
-                    </div>
-
-                    <div class="registrarte">
-                        <span>Registrarte</span>
-                    </div>
-
-                    <div class="boton ms-3">
-                        <button class="btn btn-light btn-oval">Iniciar sesión</button>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Botón + menú móvil -->
-            <div class="col-auto d-flex d-lg-none boton-movil">
-                <button class="btn btn-light boton-movil">Abrir la aplicación</button>
-                <div class="menu" aria-label="Menú de navegación" role="button" tabindex="0">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-list"
-                        viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M2.5 12.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-4a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-4a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11z" />
-                    </svg>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-
-<!-- SIDEBAR -->
+<!-- Sidebar -->
 <div class="sidebar text-white p-2 rounded me-3">
-    <!-- Contenido del sidebar (idéntico al HTML principal) -->
-                <div class="d-flex align-items-center">
+            <div class="d-flex align-items-center">
             <p class="montserrat p-2"><strong>Tu Biblioteca</strong></p>
             <div class="ms-auto">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
@@ -151,13 +63,15 @@
     </div>
 </div>
 
-<!-- CONTENIDO PRINCIPAL -->
+<!-- Contenido principal -->
 <div class="pagprinc text-white p-3 rounded position-relative">
     <!-- Carrusel 1 -->
     <div class="d-flex align-items-center gap-3 mostrar">
         <h4 class="montserrat mb-4 mt-5">Canciones en tendencia</h4>
         <p class="montserrat mb-4 mt-5 ms-auto mostrar">Mostrar todo</p>
     </div>
+
+    <div id="carruselCanciones1" class="d-flex overflow-auto flex-nowrap pb-3">
         <!-- tarjetas aquí... -->
          <div id="carruselCanciones1" class="d-flex overflow-auto flex-nowrap pb-3">
     <!-- Tarjeta 1 -->
@@ -229,6 +143,7 @@
             <p class="card-text des">Rels B</p>
         </div>
     </div>
+
     <!-- Tarjeta 8 -->
     <div class="card transparente-card me-3">
         <img src="img/tuyyo.jpg" class="card-img-top
@@ -241,6 +156,8 @@
     </div>
 
 </div>
+
+    </div>
 
     <!-- Carrusel 2 -->
     <div class="d-flex align-items-center p-2 ">
@@ -421,33 +338,56 @@
                 <p class="card-text des">Feid</p>
             </div>
         </div>
+    </div>
+<div class="mx-auto my-4 border-top border-2 border-dark" style="width: 90%;">
+  <div class="d-flex flex-wrap justify-content-between align-items-start">
+
+    <!-- Columna 1 -->
+    <ul class="list-unstyled text-center col-md mb-3">
+      <li class="titulo"><strong>Empresa</strong></li>
+      <li class="des">Acerca de</li>
+      <li class="des">Empleo</li>
+      <li class="des">For the Record</li>
+    </ul>
+
+    <!-- Columna 2 -->
+    <ul class="list-unstyled text-center col-md mb-3">
+      <li class="titulo"><strong>Comunidades</strong></li>
+      <li class="des">Para artistas</li>
+      <li class="des">Fans</li>
+      <li class="des">Partners</li>
+    </ul>
+
+    <!-- Columna 3 -->
+    <ul class="list-unstyled text-center col-md mb-3">
+      <li class="titulo"><strong>Enlaces</strong></li>
+      <li class="des">Ayuda</li>
+      <li class="des">Contacto</li>
+      <li class="des">Privacidad</li>
+    </ul>
+
+    <!-- Columna 4 -->
+    <ul class="list-unstyled text-center col-md mb-3">
+      <li class="titulo"><strong>Servicios</strong></li>
+      <li class="des">Streaming</li>
+      <li class="des">Planes</li>
+      <li class="des">Subscripciones</li>
+    </ul>
+
+    <!-- Espacio para botones circulares -->
+    <div class="d-flex align-items-center gap-2 col-md-auto mb-3">
+      <button class="btn btn-dark rounded-circle" style="width:35px; height:35px;"> <img src="img/icons8-instagram-100.png" class="img-fluid" style="width: 27px; height: 27px;"></button>
+      <button class="btn btn-dark rounded-circle" style="width:35px; height:35px;"><img src="img/icons8-twitterx-50.png" class="img-fluid" style="width: 25;height: 25px;"></button>
+      <button class="btn btn-dark rounded-circle" style="width:35px; height:35px;"> <img src="img/icons8-facebook-nuevo-25.png" alt=""></button>
+    </div>
+
+  </div>
 </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
 
-    <footer class="fixed-bottom text-white py-2 d-none d-md-block">
-        <div class="container-fluid">
-            <!-- Flexbox para alinear el botón y el texto en la misma fila -->
-            <div class="d-flex align-items-center justify-content-between text-container">
 
-                <!-- Texto -->
-                <div class="text-start ms-3">
-                    <p class="frase1 mb-1">Muestra de Spotify</p>
-                    <p class="frase2 mb-0">Regístrate para disfrutar de canciones y podcasts sin límites, con anuncios
-                        ocasionales. No hace falta tarjeta de crédito</p>
-                </div>
 
-                <!-- Botón -->
-                <div class="boton">
-                    <button class="btn btn-light btn-oval ">Registrarte gratis</button>
-                </div>
-            </div>
-        </div>
-    </footer>
+</div>
 
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-<script defer src="Componentes/PaginaCarruseles/paginacarrusel/paginacarrusel.js"></script>
+<script defer src="js/slider.js"></script>
 </body>
 </html>

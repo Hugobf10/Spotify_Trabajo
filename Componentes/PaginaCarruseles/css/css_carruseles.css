@@ -1,0 +1,278 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000;
+    margin: 0;
+    overflow-x: hidden; /* evita scroll horizontal */
+}
+p{
+    color: white;
+}
+.montserrat {
+    margin-top: 1rem !important;   /* reduce espacio arriba */
+    margin-bottom: 0.5rem !important; /* reduce espacio abajo */
+}
+/* Scroll estilo Spotify global */
+::-webkit-scrollbar {
+    height: 8px;       /* grosor horizontal */
+    width: 8px;        /* grosor vertical */
+    background: transparent; /* carril transparente */
+    display: none;      /* oculto por defecto */
+}
+
+/* Al pasar el ratón sobre un contenedor con scroll, aparece la barra */
+*:hover::-webkit-scrollbar {
+    display: block;
+}
+
+/* Thumb (barra que se mueve) */
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+/* Thumb al pasar el ratón encima */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+
+/* Sidebar dividido en top scroll y bottom fijo */
+.sidebar {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    width: 380px;
+    height: calc(100vh - 65px);
+    background: rgb(18, 18, 18);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 0 20px 20px 0;
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+/* Parte superior con scroll */
+.sidebar-top {
+    flex: 1; /* ocupa el espacio disponible */
+    overflow-y: auto;
+    margin-bottom: 1rem;
+}
+
+/* Parte inferior fija */
+.sidebar-bottom {
+    font-size: 0.5rem;
+    color: #bbb;
+}
+.sidebar-bottom:hover{
+    text-decoration: underline;
+}
+
+/* Burbuja dentro del sidebar */
+.burbuja {
+    width: 95%;
+    background-color: rgba(31, 31, 31);
+    padding: 16px;             
+    border-radius: 0 15px 15px 0;
+    margin-bottom: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.burbuja p {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.burbuja button {
+    align-self: flex-start;
+    margin-top: 8px;
+    padding: 5px 12px;
+    font-size: 0.8rem;
+    border-radius: 12px;
+}
+
+/* Contenido principal */
+
+.pagprinc {
+    position: relative;
+    margin-left: 390px;          /* espacio lateral para el sidebar */
+    margin-top: 65px;            /* 🔥 deja el hueco exacto de la cabecera fija */
+    padding: 2rem;
+    min-height: calc(100vh - 65px); /* ajusta a la altura visible */
+    background: linear-gradient(
+        180deg,
+        rgba(32, 32, 32, 1) 0%,
+        rgba(28, 28, 28, 1) 15%,
+        rgba(22, 22, 22, 0.65) 65%,
+        rgba(18, 18, 18, 1) 100%
+    );
+    border-radius: 0 20px 20px 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
+/* Carruseles */
+#carruselCanciones1, #carruselCanciones2, #carruselCanciones3 {
+    display: flex;
+    overflow-x: auto;   
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 0,4rem;
+    padding-bottom: 0,5rem;
+}
+
+#carruselCanciones1::-webkit-scrollbar, 
+#carruselCanciones2::-webkit-scrollbar,
+#carruselCanciones3::-webkit-scrollbar {
+    display: none;
+}
+
+/* Tarjetas */
+#carruselCanciones1 .card,
+#carruselCanciones2 .card,
+#carruselCanciones3 .card {
+    flex: 0 0 auto;
+    width: 9rem;
+    scroll-snap-align: start;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    border: none;
+}
+
+/* Imagen cuadrada */
+#carruselCanciones1 .card-img-top,
+#carruselCanciones3 .card-img-top {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Imagen circular */
+#carruselCanciones2 .card-img-top.redondeo {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Efecto hover */
+.transparente-card {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.transparente-card:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.card-text{
+    color: white;
+}
+.card-text.titulo{
+    font-size: 0.9rem;
+    color: rgb(231, 231, 231);
+}
+.card-text.des{
+    font-size: 12px;
+    color: rgba(163, 163, 163);
+}
+.des{
+    font-size: 14px;
+    color: rgba(163, 163, 163);
+}
+
+.card-text:hover {
+    text-decoration: underline;
+}
+.mostrar:hover{
+    text-decoration: underline;
+}
+
+/* Botones de navegación carrusel */
+.carousel-btn-prev, .carousel-btn-next {
+    background: rgba(235, 231, 231, 0.5);
+    border-radius: 50%;
+    border: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+}
+/* Contenedor de la tarjeta */
+.card {
+    position: relative; /* necesario para el botón encima */
+}
+
+/* Botón de reproducir */
+.card .play-btn {
+    position: absolute;
+    top: 45%;
+    left: 75%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background-color: #1ed760;       /* verde Spotify */
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    opacity: 0;                       /* invisible por defecto */
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+
+/* Mostrar el botón solo al pasar el ratón sobre la tarjeta */
+.card:hover .play-btn {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: auto;             /* activo solo al hacer hover */
+}
+
+
+/* Responsivo */
+@media (max-width: 576px) {
+    .sidebar { display: none; }
+    .pagprinc { margin-left: 0; padding: 1rem; }
+}
+@media (max-width: 768px) {
+   .sidebar{
+    display: none;
+   }
+    .pagprinc { 
+        margin-left: 0; 
+        padding: 1rem; }
+}
+
+
+
+
+
+
+
+
+
+
+

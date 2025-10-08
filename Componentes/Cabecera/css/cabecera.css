@@ -1,5 +1,4 @@
 
-
 /* Cabecera principal */
 .cabecera {
     background-color: black;
@@ -10,6 +9,12 @@
     padding: 0 20px;
     position: relative;
     overflow: hidden; /* evita el borde blanco lateral */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+    box-sizing: border-box;
 }
 
 /* Logo */
@@ -40,6 +45,28 @@
     width: 50px;
     height: 50px;
     cursor: pointer; /* Al pasar el cursor por encima sale la mano */
+    margin-left: 15px;
+}
+
+.imgLogoEntero {
+    height: 25px;
+    margin-left: 15px;
+}
+
+/* Contenedor de casa + buscador + palabras */
+.circulo-buscador {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 100%;
+    flex-wrap: nowrap; /* Mantener todo en una línea en pantallas grandes */
+}
+
+/* Ícono de casa */
+.circulo {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
     background-color: #2B2B2B;
     border-radius: 50%;
     display: flex;
@@ -52,6 +79,7 @@
 
 .circulo:hover {
     transform: scale(1.05); /* Se agranda al pasa el cursor por encima */
+    transform: scale(1.05);
     background-color: #3a3a3a;
 }
 
@@ -99,6 +127,8 @@
 }
 
 /* Al enfocar el input, borde blanco */
+
+
 .buscador .input-group:focus-within {
     border-color: white;
 }
@@ -296,3 +326,162 @@
   height: 20px;
   margin-top: -3px;
 }
+/* Palabras */
+.palabras {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.palabras span {
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.palabras span:hover {
+    color: white;
+}
+
+/* Línea vertical */
+.linea {
+    width: 1px;
+    height: 30px;
+    background-color: white;
+}
+
+/* Flecha + texto */
+.flecha {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 8px;
+}
+
+.flecha svg {
+    color: #aaa;
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.7));
+}
+
+.flecha-palabra {
+    color: #aaa;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.flecha:hover svg,
+.flecha:hover .flecha-palabra {
+    color: white;
+}
+
+/* Registrarte */
+.registrarte {
+    display: flex;
+    align-items: center;
+}
+
+.registrarte span {
+    color: #aaa;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.registrarte span:hover {
+    color: white;
+}
+
+/* Botones ovalados */
+.btn-oval {
+    border-radius: 25px;
+    padding: 13px 25px;
+    color: black;
+    background-color: white !important;
+    border: none;
+    font-weight: 650;
+    white-space: nowrap;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.btn-oval:hover {
+    transform: scale(1.04);
+    font-weight: 700;
+    background-color: #F2F2F2 !important;
+}
+
+/* Botón móvil */
+.boton-movil {
+    display: none;
+    align-items: center;
+    gap: 6px;
+    margin-left: auto;
+    margin-right: 10px;
+    z-index: 300;
+}
+
+.boton-movil button {
+    padding: 4px 10px ;
+    font-size: 11px;
+    height: 28px;
+    min-width: auto;
+    border-radius: 20px;
+    background-color: white !important;
+    color: black !important;
+    font-weight: bold;
+}
+
+.menu svg {
+    fill: white;
+    width: 20px;
+    height: 20px;
+}
+
+/* Responsive */
+
+/* Desktop grande (pantallas >1024px) */
+@media (max-width: 1440px) {
+    .buscador { width: 300px; }
+    .palabras span { font-size: 14px; }
+    .flecha-palabra { font-size: 12px; }
+}
+
+/* Laptops hasta 1024px */
+@media (max-width: 1024px) {
+    .circulo-buscador,
+    .circulo,
+    .buscador,
+    .palabras,
+    .linea,
+    .flecha-palabra,
+    .flecha,
+    .registrarte,
+    .btn-oval ,
+    .imgLogo{
+        display: none !important;
+    }
+
+    .boton-movil {
+        display: flex !important;
+    }
+    .imgLogoEntero{
+      display: flex !important;
+      height: 35px;
+    }
+}
+
+/* Tablets hasta 768px */
+@media (max-width: 768px) {
+    .buscador { width: 150px; }
+}
+@media (max-width: 320px) {
+    .buscador { width: 120px; }
+    .imgLogo { height: 35px; }
+    .imgLogoEntero { height: 20px; }
+    .cabecera { padding: 0 10px; }
+    .boton-movil button { font-size: 10px; height: 25px; padding: 3px 8px; }
+}
+
