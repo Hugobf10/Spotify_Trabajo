@@ -35,18 +35,16 @@ p{
 /* Sidebar dividido en top scroll y bottom fijo */
 .sidebar {
     position: fixed;
-    top: 0;
+    top: 65px;
     left: 0;
-    width: 485px;        
-    height: 100vh;
-    background:rgb(18, 18, 18);
+    width: 485px;
+    height: calc(100vh - 65px);
+    background: rgb(18, 18, 18);
     color: white;
     padding: 1.5rem;
     border-radius: 0 20px 20px 0;
     z-index: 100;
-
-    display: flex;
-    flex-direction: column;
+    box-sizing: border-box;
 }
 
 /* Parte superior con scroll */
@@ -94,23 +92,31 @@ p{
 }
 
 /* Contenido principal */
+
 .pagprinc {
-    border-radius: 0 20px 20px 0;
-    margin-left: 495px;   /* deja espacio para el sidebar */
+    position: relative;
+    margin-left: 495px;          /* espacio lateral para el sidebar */
+    margin-top: 65px;            /* 🔥 deja el hueco exacto de la cabecera fija */
     padding: 2rem;
-    min-height: 100vh;
+    min-height: calc(100vh - 65px); /* ajusta a la altura visible */
     background: linear-gradient(
-    180deg,
-    rgba(32, 32, 32, 1) 0%,     /* gris al inicio */
-    rgba(28, 28, 28, 1) 15%,    /* gris más oscuro, empieza el difuminado */
-    rgba(22, 22, 22, 65%),      /* gris casi negro, transición suave */
-    rgba(18, 18, 18, 1) 100%    /* negro total al final */
-);
-
-
-
-
+        180deg,
+        rgba(32, 32, 32, 1) 0%,
+        rgba(28, 28, 28, 1) 15%,
+        rgba(22, 22, 22, 0.65) 65%,
+        rgba(18, 18, 18, 1) 100%
+    );
+    border-radius: 0 20px 20px 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
+
+
+
+
+
+
+
 
 /* Carruseles */
 #carruselCanciones1, #carruselCanciones2, #carruselCanciones3 {
@@ -247,6 +253,7 @@ p{
     .sidebar { display: none; }
     .pagprinc { margin-left: 0; padding: 1rem; }
 }
+
 
 
 

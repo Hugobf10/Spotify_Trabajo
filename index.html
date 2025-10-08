@@ -14,72 +14,60 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
 <!-- CSS combinado -->
-<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="Componentes/PaginaCarruseles/css/css_carruseles.css">
+<link rel="stylesheet" href="Componentes/Cabecera/css/cabecera.css">
+<link rel="stylesheet" href="Componentes/Biblioteca/css/biblioteca.css">
 </head>
 <body>
 
-<!-- CABECERA -->
 <div class="container-fluid cabecera">
-    <div class="row align-items-center w-100">
+  <div class="cabecera-izquierda">
+    <!-- Logo -->
+    <img src="img/spotify_Logo.png" alt="Logo" class="d-none d-lg-block imgLogo" data-bs-toggle="tooltip" title="Spotify">
+    <img src="img/Spotify_Logo_entero.png" alt="Logo entero" class="d-block d-lg-none imgLogoEntero">
 
-        <!-- Logo -->
-        <div class="col-auto">
-            <img src="img/spotify_Logo.png" alt="Logo" class="d-none d-lg-block imgLogo" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Spotify" />
-            <img src="img/Spotify_Logo_entero.png" alt="Logo con nombre" class="d-block d-lg-none imgLogoEntero" />
-        </div>
-
-        <!-- Casa + buscador + palabras -->
-        <div class="col d-flex align-items-center d-none d-lg-flex">
-            <div class="circulo-buscador d-flex align-items-center">
-                <div class="rounded-circle circulo me-1 d-flex justify-content-center align-items-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Inicio">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
-                        <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
-                    </svg>
-                </div>
-
-                <div class="buscador ms-1">
-                    <div class="input-group">
-                        <span class="input-group-text"><i class="bi bi-search"></i></span>
-                        <input type="text" class="form-control" placeholder="¿Qué quieres reproducir?" />
-                    </div>
-                </div>
-
-                <div class="palabras">
-                    <span>Premium</span>
-                    <span>Asistencia</span>
-                    <span>Descargar</span>
-                </div>
-
-                <div class="linea"></div>
-
-                <div class="flecha">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z" />
-                    </svg>
-                    <span class="flecha-palabra">Instalar app</span>
-                </div>
-
-                <div class="registrarte">
-                    <span>Registrarte</span>
-                </div>
-
-                <div class="boton ms-3">
-                    <button class="btn btn-light btn-oval">Iniciar sesión</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Botón + menú móvil -->
-        <div class="col-auto d-flex d-lg-none boton-movil">
-            <button class="btn btn-light btn-oval">Abrir la aplicación</button>
-            <div class="menu" aria-label="Menú de navegación" role="button" tabindex="0">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-list" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M2.5 12.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-4a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-4a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11z" />
-                </svg>
-            </div>
-        </div>
+    <!-- Casa -->
+    <div class="circulo" data-bs-toggle="tooltip" title="Inicio">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+        <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+      </svg>
     </div>
+
+    <!-- Buscador -->
+    <div class="buscador">
+      <div class="input-group">
+        <span class="input-group-text"><i class="bi bi-search"></i></span>
+        <input type="text" class="form-control" placeholder="¿Qué quieres reproducir?">
+      </div>
+    </div>
+  </div>
+
+  <div class="cabecera-derecha">
+    <div class="palabras">
+      <span>Premium</span>
+      <span>Asistencia</span>
+      <span>Descargar</span>
+    </div>
+
+    <div class="linea"></div>
+
+    <div class="flecha">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z"/>
+      </svg>
+      <span class="flecha-palabra">Instalar app</span>
+    </div>
+
+    <div class="registrarte">
+      <span>Registrarte</span>
+    </div>
+
+    <div class="boton">
+      <button class="btn btn-light btn-oval">Iniciar sesión</button>
+    </div>
+  </div>
 </div>
+
 
 <!-- SIDEBAR -->
 <div class="sidebar text-white p-2 rounded me-3">
@@ -404,6 +392,29 @@
             </div>
         </div>
 </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <footer class="fixed-bottom text-white py-2 d-none d-md-block">
+        <div class="container-fluid">
+            <!-- Flexbox para alinear el botón y el texto en la misma fila -->
+            <div class="d-flex align-items-center justify-content-between text-container">
+
+                <!-- Texto -->
+                <div class="text-start ms-3">
+                    <p class="frase1 mb-1">Muestra de Spotify</p>
+                    <p class="frase2 mb-0">Regístrate para disfrutar de canciones y podcasts sin límites, con anuncios
+                        ocasionales. No hace falta tarjeta de crédito</p>
+                </div>
+
+                <!-- Botón -->
+                <div class="boton">
+                    <button class="btn btn-light btn-oval ">Registrarte gratis</button>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>

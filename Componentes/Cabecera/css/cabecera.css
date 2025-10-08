@@ -8,9 +8,27 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
-    position: relative;
-    overflow: hidden; /* evita el borde blanco lateral */
+    position: fixed;    /* fijo arriba */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;       /* encima del sidebar */
+    box-sizing: border-box;
 }
+
+/* Separar bloques: izquierda, buscador, derecha */
+.cabecera .cabecera-izquierda {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cabecera .cabecera-derecha {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* separación entre palabras, flecha, registrarte y botón */
+}
+
 
 /* Logo */
 .imgLogo {
@@ -31,6 +49,9 @@
   transform: translateY(-50%);
   max-width: 80%; /* Previene que crezca demasiado */
   overflow: hidden; /* Evita desbordes */
+  display: flex;
+  align-items: center;
+    gap: 10px;
   
 }
 
@@ -81,8 +102,17 @@
     }
 }
 @media (max-width: 768px) {
-    .buscador {
-        width: 180px;
+      /* Ocultar escritorio */
+    .circulo-buscador,
+    .palabras,
+    .flecha,
+    .registrarte {
+        display: none !important;
+    }
+
+    /* Mostrar móvil */
+    .boton-movil {
+        display: flex !important;
     }
 }
 
@@ -276,20 +306,7 @@
 
 /* Mostramos el botón móvil solo debajo de 1024px */
 /* Mostramos el botón móvil solo debajo de 1024px */
-@media (max-width: 1024px) {
-    /* Ocultar escritorio */
-    .circulo-buscador,
-    .palabras,
-    .flecha,
-    .registrarte {
-        display: none !important;
-    }
 
-    /* Mostrar móvil */
-    .boton-movil {
-        display: flex !important;
-    }
-}
 
 
 
