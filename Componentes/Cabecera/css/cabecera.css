@@ -198,7 +198,7 @@
   font-size: 14px;
   font-weight: bold;
   transition: color 0.3s ease;
-    white-space: nowrap; /* ✅ evita que se parta en dos líneas */
+  white-space: nowrap; /* ✅ evita que se parta en dos líneas */
 
 }
 
@@ -243,7 +243,7 @@
   transition: transform 0.3s ease, color 0.3s ease;
   font-weight: 650;
   margin-left: 5px;
-      white-space: nowrap; /* ✅ evita que se parta en dos líneas */
+  white-space: nowrap; /* ✅ evita que se parta en dos líneas */
 
 }
 
@@ -290,20 +290,9 @@
         display: flex !important;
     }
 }
-
-
-
 .menu svg {
   fill: white;
   width: 20px;
   height: 20px;
   margin-top: -3px;
 }
-
-
-
-
-
-
-
-
