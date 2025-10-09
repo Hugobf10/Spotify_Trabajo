@@ -19,61 +19,55 @@
 
             <!-- Logo -->
             <div class="col-auto">
-                <!-- Logo escritorio -->
                 <img src="img/spotify_Logo.png" alt="Logo" class="d-none d-lg-block imgLogo" data-bs-toggle="tooltip"
                     data-bs-placement="bottom" title="Spotify" />
-                <!-- Logo móvil -->
                 <img src="img/Spotify_Logo_entero.png" alt="Logo con nombre" class="d-block d-lg-none imgLogoEntero" />
             </div>
 
-            <!-- Casa + buscador + palabras -->
+            <!-- Buscador + elementos derechos -->
             <div class="col d-flex align-items-center d-none d-lg-flex">
-                <div class="circulo-buscador d-flex align-items-center">
+                <div class="circulo-buscador">
 
-                    <!-- Círculo con la casa -->
-                    <div class="rounded-circle circulo me-1 d-flex justify-content-center align-items-center"
-                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="Inicio">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
-                            class="bi bi-house" viewBox="0 0 16 16">
-                            <path
-                                d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
-                        </svg>
-                    </div>
-
-                    <!-- Buscador -->
-                    <div class="buscador ms-1">
-                        <div class="input-group">
-                            <span class="input-group-text"><i class="bi bi-search"></i></span>
-                            <input type="text" class="form-control" placeholder="¿Qué quieres reproducir?" />
+                    <!-- Bloque izquierdo: casa + buscador -->
+                    <div class="bloque-buscador">
+                        <div class="rounded-circle circulo d-flex justify-content-center align-items-center"
+                            data-bs-toggle="tooltip" data-bs-placement="bottom" title="Inicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                                class="bi bi-house" viewBox="0 0 16 16">
+                                <path
+                                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                            </svg>
+                        </div>
+                        <div class="buscador">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-search"></i></span>
+                                <input type="text" class="form-control" placeholder="¿Qué quieres reproducir?" />
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Palabras -->
-                    <div class="palabras">
-                        <span>Premium</span>
-                        <span>Asistencia</span>
-                        <span>Descargar</span>
-                    </div>
-
-                    <!-- Línea vertical -->
-                    <div class="linea"></div>
-
-                    <!-- Icono flecha e instalar -->
-                    <div class="flecha">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z" />
-                        </svg>
-                        <span class="flecha-palabra">Instalar app</span>
-                    </div>
-
-                    <div class="registrarte">
-                        <span>Registrarte</span>
-                    </div>
-
-                    <div class="boton ms-3">
-                        <button class="btn btn-light btn-oval">Iniciar sesión</button>
+                    <!-- Bloque derecho: palabras, línea, flecha, registrarte, botón -->
+                    <div class="bloque-derecha">
+                        <div class="palabras">
+                            <span>Premium</span>
+                            <span>Asistencia</span>
+                            <span>Descargar</span>
+                        </div>
+                        <div class="linea"></div>
+                        <div class="flecha">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z" />
+                            </svg>
+                            <span class="flecha-palabra">Instalar app</span>
+                        </div>
+                        <div class="registrarte">
+                            <span>Registrarte</span>
+                        </div>
+                        <div class="boton-cabecera">
+                            <button class="btn btn-light btn-oval">Iniciar sesión</button>
+                        </div>
                     </div>
 
                 </div>

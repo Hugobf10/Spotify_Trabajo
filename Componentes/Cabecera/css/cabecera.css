@@ -1,5 +1,11 @@
+/* ========== RESETEO GENERAL ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* Cabecera principal */
+/* ========== CABECERA ========== */
 .cabecera {
     background-color: black;
     height: 65px;
@@ -7,62 +13,49 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
-    position: relative;
-    overflow: hidden; /* evita el borde blanco lateral */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 200;
-    box-sizing: border-box;
 }
 
-/* Logo */
+/* ========== LOGOS ========== */
 .imgLogo {
     height: 45px;
     cursor: pointer;
 }
 
-/* Logo móvil */
-.imgLogoEntero {
-    height: 25px;
-}
-
-/* Contenedor de casa + buscador */
-.circulo-buscador {
-  position: absolute;
-  top: 50%;
-  left: 35%;
-  transform: translateY(-50%);
-  max-width: 80%; /* Previene que crezca demasiado */
-  overflow: hidden; /* Evita desbordes */
-  
-}
-
-
-/* Ícono de casa (círculo) */
-.circulo {
-    width: 50px;
-    height: 50px;
-    cursor: pointer; /* Al pasar el cursor por encima sale la mano */
-    margin-left: 15px;
-}
-
 .imgLogoEntero {
     height: 25px;
     margin-left: 15px;
 }
 
-/* Contenedor de casa + buscador + palabras */
+/* ========== CONTENEDORES PRINCIPALES ========== */
+/* Contenedor general del medio y derecho */
 .circulo-buscador {
     display: flex;
     align-items: center;
-    gap: 10px;
-    max-width: 100%;
-    flex-wrap: nowrap; /* Mantener todo en una línea en pantallas grandes */
+    justify-content: flex-end;
+    flex: 1;
+    gap: 20px;
 }
 
-/* Ícono de casa */
+/* Bloque izquierdo: casa + buscador */
+.bloque-buscador {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Bloque derecho */
+.bloque-derecha {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ========== CASA (ICONO CIRCULAR) ========== */
 .circulo {
     width: 50px;
     height: 50px;
@@ -73,49 +66,21 @@
     justify-content: center;
     align-items: center;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    flex-shrink: 0;
     color: white;
 }
 
 .circulo:hover {
-    transform: scale(1.05); /* Se agranda al pasa el cursor por encima */
     transform: scale(1.05);
     background-color: #3a3a3a;
 }
 
-/* Buscador */
+/* ========== BUSCADOR ========== */
 .buscador {
-    width: 500px; /* Tamaño por defecto */
+    width: 300px;
     transition: width 0.3s ease;
     margin-right: 10px;
-    /* IMPORTANTE: este hace que el input se alargue solo hacia la derecha */
 }
 
-
-/* Responsive */
-@media (max-width: 1440px) {
-    .buscador {
-        width: 200px;
-    }
-    .flecha-palabra{
-      font-size: 7px;     
-    }
-    .palabras{
-      font-size: 10px;
-      
-    }
-    .linea{
-      margin-left: 25px;
-    }
-}
-@media (max-width: 768px) {
-    .buscador {
-        width: 180px;
-    }
-}
-
-
-/* Grupo del input */
 .buscador .input-group {
     border-radius: 25px;
     overflow: hidden;
@@ -126,212 +91,44 @@
     width: 100%;
 }
 
-/* Al enfocar el input, borde blanco */
-
-
 .buscador .input-group:focus-within {
     border-color: white;
 }
 
-/* Lupa */
 .buscador .input-group-text {
     background-color: #2B2B2B;
     border: none;
     color: #aaa;
     display: flex;
     align-items: center;
-    transition: background-color 0.3s ease;
     font-size: 20px;
     padding: 0 8px;
 }
 
-/* Input */
 .buscador input {
     background-color: #2B2B2B !important;
     color: white;
     border: none;
     border-radius: 25px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
     width: 100%;
     padding-left: 5px;
 }
 
-/* Placeholder */
 .buscador input::placeholder {
     color: #aaa;
 }
 
-/* Hover sobre input y lupa */
-.buscador .input-group:hover input,
-.buscador .input-group:hover .input-group-text {
-    background-color: #3a3a3a !important;
-}
-
-/* Hover borde sutil */
-.buscador .input-group:hover {
-    border-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Focus input */
 .buscador input:focus {
     outline: none;
     box-shadow: none;
     color: white !important;
 }
 
-.buscador .input-group:focus-within {
-    border-color: white;
-}
-
-.palabras {
-  display: flex;
-  gap: 5px;              /* Espacio entre palabras */
-  align-items: center;    /* Alineación vertical si lo pones en una cabecera */
-}
-
-.palabras span {
-  color: #aaa;            /* Gris claro por defecto */
-  cursor: pointer;
-  transition: color 0.3s ease;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.palabras span:hover {
-  color: white;           /* Se vuelve blanco al pasar el mouse */
-}
-
-.linea{
-  width: 1px;
-  height: 30px;
-  background-color: white;
-  margin-left: 25px;
-}
-
-.flecha{
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  gap: 8px; /* Espacio entre la flecha y la palabra */
-  transition: color 0.3s ease;
-  margin-left: 35px;
-}
-
-.flecha svg{
-  color: #aaa;
-  transition: color 0.3s ease;
-  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.7));
-}
-
-.flecha-palabra{
-  color: #aaa;
-  font-size: 14px;
-  font-weight: bold;
-  transition: color 0.3s ease;
-  white-space: nowrap; /* ✅ evita que se parta en dos líneas */
-
-}
-
-.flecha:hover svg, 
-.flecha:hover .flecha-palabra{
-  color: white;
-}
-
-.registrarte{
-  display: flex;
-  align-items: center; 
-  margin-left: 30px;
-}
-
-.registrarte span {
-  color: #aaa;            /* Gris claro por defecto */
-  cursor: pointer;
-  transition: color 0.3s ease;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.registrarte span:hover {
-  color: white;           /* Se vuelve blanco al pasar el mouse */
-}
-
-.btn-hover-grow {
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.btn-hover-grow:hover {
-  transform: scale(1.05);
-  font-weight: bold;
-}
-
-.btn-oval {
-  border-radius: 25px;               /* Forma ovalada */
-  padding: 13px 25px;                 /* Espaciado horizontal más amplio */
-  color: black;                      /* Texto negro */
-  background-color: white !important; /* Blanco siempre */
-  border: none;
-  transition: transform 0.3s ease, color 0.3s ease;
-  font-weight: 650;
-  margin-left: 5px;
-  white-space: nowrap; /* ✅ evita que se parta en dos líneas */
-
-}
-
-.btn-oval:hover {
-  transform: scale(1.04);            /* Agranda un poco */
-  font-weight: 700;                 /* Texto en negrita */
-  background-color: #F2F2F2 !important;
-}
-
-.boton-movil {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      /* margin-left: auto permite que el contenedor ocupe todo el espacio disponible hacia la izquierda y se pegue a la derecha */
-      margin-left: auto;
-      /* margin-right controla cuánto espacio hay entre este contenedor y el borde derecho */
-      margin-right: -25px;  /* modifica este valor para moverlo más o menos hacia la izquierda */
-    }
-
-.boton-movil button {
-  padding: 6px 12px;
-  font-size: 11px;
-  height: 28px;
-  min-width: 85px;
-  border-radius: 20px;
-  background-color: white !important;
-  color: black !important;
-  font-weight: bold;
-}
-
-/* Mostramos el botón móvil solo debajo de 1024px */
-/* Mostramos el botón móvil solo debajo de 1024px */
-@media (max-width: 1024px) {
-    /* Ocultar escritorio */
-    .circulo-buscador,
-    .palabras,
-    .flecha,
-    .registrarte {
-        display: none !important;
-    }
-
-    /* Mostrar móvil */
-    .boton-movil {
-        display: flex !important;
-    }
-}
-.menu svg {
-  fill: white;
-  width: 20px;
-  height: 20px;
-  margin-top: -3px;
-}
-/* Palabras */
+/* ========== PALABRAS ========== */
 .palabras {
     display: flex;
-    gap: 5px;
+    gap: 10px;
     align-items: center;
-    margin-left: 100px;
 }
 
 .palabras span {
@@ -346,19 +143,19 @@
     color: white;
 }
 
-/* Línea vertical */
+/* ========== LÍNEA VERTICAL ========== */
 .linea {
     width: 1px;
     height: 30px;
     background-color: white;
 }
 
-/* Flecha + texto */
+/* ========== FLECHA + TEXTO ========== */
 .flecha {
     display: flex;
     align-items: center;
+    gap: 5px;
     cursor: pointer;
-    gap: 8px;
 }
 
 .flecha svg {
@@ -378,12 +175,7 @@
     color: white;
 }
 
-/* Registrarte */
-.registrarte {
-    display: flex;
-    align-items: center;
-}
-
+/* ========== REGISTRARTE ========== */
 .registrarte span {
     color: #aaa;
     cursor: pointer;
@@ -395,7 +187,7 @@
     color: white;
 }
 
-/* Botones ovalados */
+/* ========== BOTÓN OVALADO ========== */
 .btn-oval {
     border-radius: 25px;
     padding: 13px 25px;
@@ -413,7 +205,7 @@
     background-color: #F2F2F2 !important;
 }
 
-/* Botón móvil */
+/* ========== BOTÓN MÓVIL (solo visible en móviles) ========== */
 .boton-movil {
     display: none;
     align-items: center;
@@ -434,54 +226,139 @@
     font-weight: bold;
 }
 
-.menu svg {
-    fill: white;
-    width: 20px;
-    height: 20px;
-}
+/* ========== MEDIA QUERIES ========== */
 
-/* Responsive */
+/* Pantallas grandes: 1440px – 1919px */
+@media (min-width: 1440px) and (max-width: 1919px) {
+    .palabras {
+        gap: 8px;
+        margin-left: auto;
+    }
 
-/* Desktop grande (pantallas >1024px) */
-@media (max-width: 1440px) {
-    .buscador { width: 300px; }
-    .palabras span { font-size: 14px; }
-    .flecha-palabra { font-size: 12px; }
-}
-
-/* Laptops hasta 1024px */
-@media (max-width: 1024px) {
-    .circulo-buscador,
-    .circulo,
-    .buscador,
-    .palabras,
     .linea,
-    .flecha-palabra,
     .flecha,
     .registrarte,
-    .btn-oval ,
-    .imgLogo{
+    .boton-cabecera {
+        margin-left: 15px;
+    }
+
+    .linea { margin-right: 5px; }
+
+    .palabras span { font-size: 14px; }
+    .flecha-palabra { font-size: 12px; }
+    .cabecera .btn-oval{
+        height: 45px;
+        display: flex;               /* convierte el botón en flexbox */
+        justify-content: center;     /* centra horizontalmente el texto */
+        align-items: center;         /* centra verticalmente el texto */
+        text-align: center;   
+    }
+}
+
+/* Pantallas extra grandes: 1920px – 2560px */
+@media (min-width: 1920px) and (max-width: 2560px) {
+    .palabras {
+        gap: 25px;
+        margin-left: auto;
+    }
+
+    .linea,
+    .flecha,
+    .registrarte,
+    .boton-cabecera {
+        margin-left: 10px;
+    }
+
+    
+    .linea { margin-right: 5px; }
+
+    .palabras span { font-size: 18px; }
+    .flecha-palabra { font-size: 15px; }
+
+    .buscador {
+        width: 300px;
+    }
+}
+
+/* Pantallas medianas: 1025px – 1439px */
+@media (min-width: 1025px) and (max-width: 1439px) {
+    .buscador { width: 200px; }
+
+    .palabras span { font-size: 12px; }
+    .flecha-palabra { font-size: 10px; }
+
+    .palabras {
+        gap: 8px;
+        margin-left: auto;
+    }
+
+    .linea,
+    .flecha,
+    .registrarte,
+    .boton-cabecera {
+        margin-left: 15px;
+    }
+}
+
+/* Pantallas móviles: ≤1024px */
+@media (max-width: 1024px) {
+    /* Ocultar elementos de escritorio */
+    .circulo-buscador,
+    .palabras,
+    .flecha,
+    .registrarte,
+    .boton-cabecera {
         display: none !important;
     }
 
+    /* Asegurar que la fila esté centrada verticalmente */
+    .cabecera .row {
+        align-items: center;
+    }
+
+    /* Contenedor móvil */
     .boton-movil {
         display: flex !important;
+        align-items: center;
+        gap: 25px;              /* <-- tu cambio */
+        margin-left: auto;
+        margin-right: -15px;    /* <-- tu cambio */
+        flex-wrap: nowrap;
+        width: max-content;
+        z-index: 300;
     }
-    .imgLogoEntero{
-      display: flex !important;
-      height: 35px;
+
+    /* Botón móvil */
+    .boton-movil button {
+        white-space: nowrap;
+        padding: 6px 14px;
+        font-size: 13px;
+        height: 35px;
+        flex-shrink: 0;
     }
+
+    
 }
 
-/* Tablets hasta 768px */
-@media (max-width: 768px) {
-    .buscador { width: 150px; }
+
+
+@media (max-width: 375px) {
+    .boton-movil button {
+        padding: 4px 8px;     /* reduce padding para que quepa */
+        font-size: 11px;      
+        height: 28px;         
+    }
+    
 }
+
 @media (max-width: 320px) {
-    .buscador { width: 120px; }
-    .imgLogo { height: 35px; }
-    .imgLogoEntero { height: 20px; }
-    .cabecera { padding: 0 10px; }
-    .boton-movil button { font-size: 10px; height: 25px; padding: 3px 8px; }
+    .boton-movil .menu{
+        margin-right: -20px;       
+    }
+    .boton-movil button {
+        padding: 4px 12px;     /* reduce padding para que quepa */
+        font-size: 10px;      
+        height: 28px;         
+    }
 }
 

@@ -1,98 +1,87 @@
-footer {
-    height: 82px;
-    background: linear-gradient(90deg, #B33BA6, #A32A96, #A941B0, #8466D9, #5F96DE, #77A4ED);
-    border: 8px solid black;
-    cursor: pointer;
-    margin-top: auto;
+/* ---------- Footer escritorio ---------- */
+.desktop-footer {
+  height: 82px;
+  background: linear-gradient(90deg, #B33BA6, #A32A96, #A941B0, #8466D9, #5F96DE, #77A4ED);
+  border: 8px solid black;
+  cursor: pointer;
+  margin-top: auto;
 }
 
-.container-fluid {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+/* ---------- Footer móvil ---------- */
+.mobile-footer {
+  background: linear-gradient(to bottom, rgba(24,24,24,0.8), rgba(0,0,0,0.95));
+  backdrop-filter: blur(4px);
+  color: #fff;
+  border-top: 1px solid rgba(255,255,255,0.1);
 }
 
-
-p {
-    margin-bottom: 0.2rem;
-    word-wrap: break-word;
-    line-height: 1;
-    margin-top: 5px;
-
+.mobile-footer .nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  color: #fff;
 }
 
-.frase1 {
-    font-size: 14px;
-    font-weight: bold;
+.mobile-footer svg {
+  color: #fff;
+  margin-bottom: 2px;
+  transition: transform 0.2s ease;
 }
 
-.frase2 {
-    font-size: 16px;
-    font-weight: 500;
+.mobile-footer .nav-item:hover svg {
+  transform: scale(1.1);
+  color: #1DB954; /* verde estilo Spotify */
 }
 
-/* Estilos para pantallas medianas (tabletas) */
-@media (max-width: 992px) {
-    .frase1 {
-        font-size: 12px;
-    }
-
-    .frase2 {
-        font-size: 14px;
-    }
+/* Responsividad */
+@media (max-width: 425px) {
+  .mobile-footer svg { width: 20px; height: 20px; }
+  .mobile-footer p { font-size: 11px; }
 }
 
-/* Estilos para pantallas pequeñas (móviles) */
-@media (max-width: 576px) {
-    footer {
-        height: auto;
-        padding: 1rem;
-    }
-
-    .frase1 {
-        font-size: 11px;
-    }
-
-    .frase2 {
-        font-size: 13px;
-    }
+@media (max-width: 375px) {
+  .mobile-footer svg { width: 18px; height: 18px; }
+  .mobile-footer p { font-size: 10px; }
 }
 
-.boton {
-    display: flex;
-    margin-top: 2px;
-    /* margin-left: auto permite que el contenedor ocupe todo el espacio disponible hacia la izquierda y se pegue a la derecha */
-    margin-left: auto;
-    /* margin-right controla cuánto espacio hay entre este contenedor y el borde derecho */
-    margin-right: 23px;
-    /* modifica este valor para moverlo más o menos hacia la izquierda */
+@media (max-width: 320px) {
+  .mobile-footer svg { width: 17px; height: 17px; }
+  .mobile-footer p { font-size: 9px; }
 }
 
-.boton button {
-    padding: 6px 12px;
-    font-size: 15px;
-    height: 47px;
-    width: 195px;
-    border-radius: 50px;
-    background-color: white !important;
-    color: black !important;
-    font-weight: 650;
+/* Ocultar footer escritorio en móvil */
+@media (max-width: 768px) {
+  .desktop-footer {
+    display: none !important;
     
+  }
+  .mobile-footer {
+    display: block !important;
+  }
 }
 
-.btn-oval {
-  border-radius: 50px;
-  padding: 12px 33px;
-  font-size: 15px;
-  height: 47px;
-  width: 200px;
-  transition: transform 0.3s ease, font-weight 0.3s ease;
-
+/* Ocultar footer móvil en pantallas > 768px */
+@media (min-width: 769px) {
+  .mobile-footer {
+    display: none !important;
+  }
 }
 
-/* Efecto hover directamente */
-.btn-oval:hover {
-  transform: scale(1.03);
-  font-weight: 700;
-  background-color: #F2F2F2 !important;
-  border: none;
+@media(max-width:1024px){
+    .desktop-footer{
+        font-size: 13px;
+        
+    }
+    .boton{
+        padding-top: 6px;
+    }
+    .btn-oval{
+        width: 130px;
+        font-size: 10px;
+        display: flex;               /* convierte el botón en flexbox */
+        justify-content: center;     /* centra horizontalmente el texto */
+        align-items: center;         /* centra verticalmente el texto */
+        text-align: center;   
+    }
 }

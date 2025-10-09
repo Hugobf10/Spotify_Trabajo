@@ -426,7 +426,8 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 
-    <footer class="fixed-bottom text-white py-2 d-none d-md-block">
+    <!-- Footer escritorio -->
+    <footer class="fixed-bottom text-white py-2 d-none d-md-block desktop-footer">
         <div class="container-fluid">
             <!-- Flexbox para alinear el botón y el texto en la misma fila -->
             <div class="d-flex align-items-center justify-content-between text-container">
@@ -445,6 +446,66 @@
             </div>
         </div>
     </footer>
+
+    <!--Footer móvil -->
+    <footer class="fixed-bottom mobile-footer d-md-none">
+  <div class="d-flex justify-content-around text-center py-2">
+    <div class="nav-item">
+      <!-- Inicio -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+        class="bi bi-house" viewBox="0 0 16 16">
+        <path
+          d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+      </svg>
+      <p>Inicio</p>
+    </div>
+
+    <div class="nav-item">
+      <!-- Buscar -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+        class="bi bi-search" viewBox="0 0 16 16">
+        <path
+          d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 
+          1.415-1.415l-3.85-3.85zm-5.242.656a5 5 0 1 
+          1 0-10 5 5 0 0 1 0 10z" />
+      </svg>
+      <p>Buscar</p>
+    </div>
+
+    <div class="nav-item">
+      <!-- Tu biblioteca -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+        class="bi bi-collection" viewBox="0 0 16 16">
+        <path
+          d="M2 3a1 1 0 0 0-1 1v9h1V4h12V3H2zm13 
+          2H1a1 1 0 0 0-1 1v7h15V6a1 1 0 0 0-1-1zM0 
+          14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1H0z" />
+      </svg>
+      <p>Tu biblioteca</p>
+    </div>
+
+    <div class="nav-item">
+      <!-- Premium -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+        class="bi bi-spotify" viewBox="0 0 16 16">
+        <path
+          d="M8 0a8 8 0 1 0 0 16A8 
+          8 0 0 0 8 0zm3.766 11.566a.5.5 0 0 1-.683.183A7.097 
+          7.097 0 0 0 5.5 10.5a.5.5 0 0 1 0-1 
+          8.098 8.098 0 0 1 6.027 1.334.5.5 0 0 
+          1 .239.732zm.923-1.918a.625.625 0 0 
+          1-.855.23 8.922 8.922 0 0 0-7.266-.835.625.625 
+          0 0 1-.356-1.2 10.172 10.172 0 0 
+          1 8.292.95c.3.17.405.55.185.855zm.21-2.011a.75.75 
+          0 0 1-1.025.277 10.682 10.682 0 0 
+          0-8.706-.975.75.75 0 1 1-.434-1.44 
+          12.182 12.182 0 0 1 9.932 1.12c.36.2.488.66.233 
+          1.018z" />
+      </svg>
+      <p>Premium</p>
+    </div>
+  </div>
+</footer>
 
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
