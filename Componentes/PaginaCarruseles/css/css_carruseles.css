@@ -42,7 +42,7 @@ p{
     top: 65px;
     left: 0;
     width: 380px;
-    height: calc(100vh - 65px);
+    height: calc(100vh - 65px - 100px);;
     background: rgb(18, 18, 18);
     color: white;
     padding: 1.5rem;
@@ -98,6 +98,7 @@ p{
 /* Contenido principal */
 
 .pagprinc {
+    padding-bottom: 120px;
     position: relative;
     margin-left: 390px;          /* espacio lateral para el sidebar */
     margin-top: 65px;            /* 🔥 deja el hueco exacto de la cabecera fija */
