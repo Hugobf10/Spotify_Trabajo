@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="utf-8">
-<link rel="icon" type="image/png" href="img/Spotify_logo_without_text.svg">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Spotify</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="img/Spotify_logo_without_text.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spotify</title>
 
-<!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
-<!-- CSS combinado -->
-<link rel="stylesheet" href="Componentes/PaginaCarruseles/css/css_carruseles.css">
-<link rel="stylesheet" href="Componentes/Cabecera/css/cabecera.css">
-<link rel="stylesheet" href="Componentes/Biblioteca/css/biblioteca.css">
+    <!-- CSS combinado -->
+    <link rel="stylesheet" href="Componentes/PaginaCarruseles/css/css_carruseles.css">
+    <link rel="stylesheet" href="Componentes/Cabecera/css/cabecera.css">
+    <link rel="stylesheet" href="Componentes/Biblioteca/css/biblioteca.css">
 </head>
+
 <body>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
@@ -104,388 +106,387 @@
     </div>
 
 
-<!-- SIDEBAR -->
-<div class="sidebar text-white p-2 rounded me-3">
-    <!-- Contenido del sidebar (idéntico al HTML principal) -->
-                <div class="d-flex align-items-center">
+    <!-- SIDEBAR -->
+    <div class="sidebar text-white p-2 rounded me-3">
+        <!-- Contenido del sidebar (idéntico al HTML principal) -->
+        <div class="d-flex align-items-center">
             <p class="montserrat p-2"><strong>Tu Biblioteca</strong></p>
             <div class="ms-auto">
                 <p style="font-size: 30px; color: rgb(82, 82, 82);">+</p>
             </div>
         </div>
-    
-    <!-- Parte superior scrollable -->
-    <div class="sidebar-top">
 
-        <!-- Burbujas dentro de la parte superior -->
-        <div class="burbuja text-white rounded me-3">
-            <p class="montserrat"><strong>Crea Tu Primera lista</strong></p>
-            <p class="montserrat" style="font-size: small;">Es muy fácil, y te echaremos una mano</p>
-            <button class="btn btn-light"><strong>Crear lista</strong></button>
+        <!-- Parte superior scrollable -->
+        <div class="sidebar-top">
+
+            <!-- Burbujas dentro de la parte superior -->
+            <div class="burbuja text-white rounded me-3">
+                <p class="montserrat"><strong>Crea Tu Primera lista</strong></p>
+                <p class="montserrat" style="font-size: small;">Es muy fácil, y te echaremos una mano</p>
+                <button class="btn btn-light"><strong>Crear lista</strong></button>
+            </div>
+
+            <div class="burbuja text-white rounded me-3">
+                <p class="montserrat"><strong>Encuentra podcast que quieras seguir</strong></p>
+                <p class="montserrat" style="font-size: small;">te avisaremos cuando salgan nuevos capitulos</p>
+                <button class="btn btn-light"><strong>Explorar pódcast</strong></button>
+            </div>
         </div>
 
-        <div class="burbuja text-white rounded me-3">
-            <p class="montserrat"><strong>Encuentra podcast que quieras seguir</strong></p>
-            <p class="montserrat" style="font-size: small;">te avisaremos cuando salgan nuevos capitulos</p>
-            <button class="btn btn-light"><strong>Explorar pódcast</strong></button>
+        <!-- Parte inferior fija -->
+        <div class="sidebar-bottom">
+            <div class="border-bottom my-2"></div>
+            <div class="d-flex align-items-centers">
+                <p class="p-2">Legal</p>
+                <p class="p-2">Centro de seguridad y privacidad</p>
+            </div>
+            <p>Política de Privacidad</p>
+            <p>Configuración de cookies</p>
+            <p>Información sobre los anuncios</p>
+            <p>Accesibilidad</p>
+            <p>Cookies</p>
+            <button class="btn btn-outline-light btn-sm mt-2">Español de España</button>
         </div>
     </div>
 
-    <!-- Parte inferior fija -->
-    <div class="sidebar-bottom">
-        <div class="border-bottom my-2"></div>
-        <div class="d-flex align-items-centers">
-        <p class="p-2">Legal</p>
-        <p class="p-2">Centro de seguridad y privacidad</p>
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="pagprinc text-white p-3 rounded position-relative">
+        <!-- Carrusel 1 -->
+        <div class="d-flex align-items-center gap-3 mostrar">
+            <h4 class="montserrat mb-4 mt-5">Canciones en tendencia</h4>
+            <p class="montserrat mb-4 mt-5 ms-auto mostrar">Mostrar todo</p>
         </div>
-        <p>Política de Privacidad</p>
-        <p>Configuración de cookies</p>
-        <p>Información sobre los anuncios</p>
-        <p>Accesibilidad</p>
-        <p>Cookies</p>
-        <button class="btn btn-outline-light btn-sm mt-2">Español de España</button>
-    </div>
-</div>
-
-<!-- CONTENIDO PRINCIPAL -->
-<div class="pagprinc text-white p-3 rounded position-relative">
-    <!-- Carrusel 1 -->
-    <div class="d-flex align-items-center gap-3 mostrar">
-        <h4 class="montserrat mb-4 mt-5">Canciones en tendencia</h4>
-        <p class="montserrat mb-4 mt-5 ms-auto mostrar">Mostrar todo</p>
-    </div>
         <!-- tarjetas aquí... -->
-         <div id="carruselCanciones1" class="d-flex overflow-auto flex-nowrap pb-3">
-    <!-- Tarjeta 1 -->
-    <div class="card transparente-card me-3">
-        <img src="img/ruina.png" class="card-img-top p-2" alt="Ruina">
-        <button class="play-btn">▶</button>
-        <div class="card-body text-start">
-            <h5 class="card-text titulo titulo">Ruina</h5>
-            <p class="card-text des">Xiyo y Fernandez</p>
-        </div>
-    </div>
+        <div id="carruselCanciones1" class="d-flex overflow-auto flex-nowrap pb-3">
+            <!-- Tarjeta 1 -->
+            <div class="card transparente-card me-3">
+                <img src="img/ruina.png" class="card-img-top p-2" alt="Ruina">
+                <button class="play-btn">▶</button>
+                <div class="card-body text-start">
+                    <h5 class="card-text titulo titulo">Ruina</h5>
+                    <p class="card-text des">Xiyo y Fernandez</p>
+                </div>
+            </div>
 
-    <!-- Tarjeta 2 -->
-    <div class="card transparente-card me-3">
-        <img src="img/comvoce.jpg" class="card-img-top p-2" alt="Com Voce">
-        <button class="play-btn">▶</button>
-        <div class="card-body text-start">
-            <h5 class="card-text titulo titulo">Com Voce</h5>
-            <p class="card-text des">Judeline, Amaia</p>
-        </div>
-    </div>
+            <!-- Tarjeta 2 -->
+            <div class="card transparente-card me-3">
+                <img src="img/comvoce.jpg" class="card-img-top p-2" alt="Com Voce">
+                <button class="play-btn">▶</button>
+                <div class="card-body text-start">
+                    <h5 class="card-text titulo titulo">Com Voce</h5>
+                    <p class="card-text des">Judeline, Amaia</p>
+                </div>
+            </div>
 
-    <!-- Tarjeta 3 -->
-    <div class="card transparente-card me-3">
-        <img src="img/ella.jpg" class="card-img-top p-2" alt="Ella">
-        <button class="play-btn">▶</button>
-        <div class="card-body text-start">
-            <h5 class="card-text titulo titulo">Ella</h5>
-            <p class="card-text des">Zion, Bad Gyal</p>
-        </div>
-    </div>
+            <!-- Tarjeta 3 -->
+            <div class="card transparente-card me-3">
+                <img src="img/ella.jpg" class="card-img-top p-2" alt="Ella">
+                <button class="play-btn">▶</button>
+                <div class="card-body text-start">
+                    <h5 class="card-text titulo titulo">Ella</h5>
+                    <p class="card-text des">Zion, Bad Gyal</p>
+                </div>
+            </div>
 
-    <!-- Tarjeta 4 -->
-    <div class="card transparente-card me-3">
-        <img src="img/aurora.jpg" class="card-img-top p-2" alt="Aurora">
-        <button class="play-btn">▶</button>
-        <div class="card-body text-start">
-            <h5 class="card-text titulo titulo">Aurora</h5>
-            <p class="card-text des">Mora, DeLaRose</p>
-        </div>
-    </div>
+            <!-- Tarjeta 4 -->
+            <div class="card transparente-card me-3">
+                <img src="img/aurora.jpg" class="card-img-top p-2" alt="Aurora">
+                <button class="play-btn">▶</button>
+                <div class="card-body text-start">
+                    <h5 class="card-text titulo titulo">Aurora</h5>
+                    <p class="card-text des">Mora, DeLaRose</p>
+                </div>
+            </div>
 
-    <!-- Tarjeta 5 -->
-    <div class="card transparente-card me-3">
-        <img src="img/rumor.png" class="card-img-top p-2" alt="RU MOR">
-        <button class="play-btn">▶</button>
-        <div class="card-body text-start">
-            <h5 class="card-text titulo titulo">RU MOR</h5>
-            <p class="card-text des">Feid</p>
-        </div>
-    </div>
+            <!-- Tarjeta 5 -->
+            <div class="card transparente-card me-3">
+                <img src="img/rumor.png" class="card-img-top p-2" alt="RU MOR">
+                <button class="play-btn">▶</button>
+                <div class="card-body text-start">
+                    <h5 class="card-text titulo titulo">RU MOR</h5>
+                    <p class="card-text des">Feid</p>
+                </div>
+            </div>
 
-    <!-- Tarjeta 6 -->
-    <div class="card transparente-card me-3">
-        <img src="img/malibu.jpeg" class="card-img-top p-2" alt="MalibU">
-        <button class="play-btn">▶</button>
-        <div class="card-body text-start">
-            <h5 class="card-text titulo titulo">MalibU</h5>
-            <p class="card-text des">Rusowsky</p>
-        </div>
-    </div>
+            <!-- Tarjeta 6 -->
+            <div class="card transparente-card me-3">
+                <img src="img/malibu.jpeg" class="card-img-top p-2" alt="MalibU">
+                <button class="play-btn">▶</button>
+                <div class="card-body text-start">
+                    <h5 class="card-text titulo titulo">MalibU</h5>
+                    <p class="card-text des">Rusowsky</p>
+                </div>
+            </div>
 
-    <!-- Tarjeta 7 -->
-    <div class="card transparente-card me-3">
-        <img src="img/Tuvassin.jpeg" class="card-img-top p-2" alt="Tuvassin">
-        <button class="play-btn">▶</button>
-        <div class="card-body text-start">
-            <h5 class="card-text titulo titulo">Tu Vas Sin</h5>
-            <p class="card-text des">Rels B</p>
-        </div>
-    </div>
-    <!-- Tarjeta 8 -->
-    <div class="card transparente-card me-3">
-        <img src="img/tuyyo.jpg" class="card-img-top
+            <!-- Tarjeta 7 -->
+            <div class="card transparente-card me-3">
+                <img src="img/Tuvassin.jpeg" class="card-img-top p-2" alt="Tuvassin">
+                <button class="play-btn">▶</button>
+                <div class="card-body text-start">
+                    <h5 class="card-text titulo titulo">Tu Vas Sin</h5>
+                    <p class="card-text des">Rels B</p>
+                </div>
+            </div>
+            <!-- Tarjeta 8 -->
+            <div class="card transparente-card me-3">
+                <img src="img/tuyyo.jpg" class="card-img-top
         p-2" alt="tuyyo">
-        <button class="play-btn">▶</button>
-        <div class="card-body text-start">
-            <h5 class="card-text titulo titulo">Tu y Yo</h5>
-            <p class="card-text des">Metrika & Yung Beef</p>
-        </div>
-    </div>
-
-</div>
-
-    <!-- Carrusel 2 -->
-    <div class="d-flex align-items-center p-2 ">
-        <h4 class="montserrat gord mb-4 mt-5 mostrar">Artistas Populares</h4>
-        <p class="montserrat mb-4 mt-5 ms-auto mostrar">Mostrar todo</p>
-    </div>
-
-    <div id="carruselCanciones2" class="d-flex overflow-auto flex-nowrap pb-3">
-        <!-- tarjetas aquí... -->
-          <div class="card transparente-card me-3">
-            <img src="img/ab6761610000e5eb81f47f44084e0a09b5f0fa13.jpeg" class="card-img-top redondeo p-2" alt="Bad Bunny">
-            <button class="play-btn">▶</button>
-            <div class="card-body text-start">
-                <h5 class="card-text titulo titulo">Bad Bunny</h5>
-                <p class="card-text des">Artista</p>
-            </div>
-        </div>
-        <div class="card transparente-card me-3">
-            <img src="img/comvoce.jpg" class="card-img-top redondeo p-2" alt="Amaia">
-            <button class="play-btn">▶</button>
-            <div class="card-body text-start">
-                <h5 class="card-text titulo titulo">Amaia</h5>
-                <p class="card-text des">Artista</p>
-            </div>
-        </div>
-        <div class="card transparente-card me-3">
-            <img src="img/ella.jpg" class="card-img-top redondeo p-2" alt="Zion">
-            <button class="play-btn">▶</button>
-            <div class="card-body text-start">
-                <h5 class="card-text titulo titulo">Zion</h5>
-                <p class="card-text des">Artista</p>
-            </div>
-        </div>
-        <div class="card transparente-card me-3">
-            <img src="img/aurora.jpg" class="card-img-top redondeo p-2" alt="Mora">
-            <button class="play-btn">▶</button>
-            <div class="card-body text-start">
-                <h5 class="card-text titulo">Mora</h5>
-                <p class="card-text des">Artista</p>
-            </div>
-        </div>
-        <div class="card transparente-card me-3">
-            <img src="img/feid.jpeg" class="card-img-top redondeo p-2" alt="Feid">
-            <button class="play-btn">▶</button>
-            <div class="card-body text-start">
-                <h5 class="card-text titulo">Feid</sh5>
-                <p class="card-text des">Artista</p>
-            </div>
-        </div>
-                <div class="card transparente-card me-3">
-            <img src="img/karolg.jpeg" class="card-img-top redondeo p-2" alt="karolg">
-            <button class="play-btn">▶</button>
-            <div class="card-body text-start">
-                <h5 class="card-text titulo">Karol G</h5>
-                <p class="card-text des">Artista</p>
-            </div>
-        </div>
-                <div class="card transparente-card me-3">
-            <img src="img/badgy.jpeg" class="card-img-top redondeo p-2" alt="badgy">
-            <button class="play-btn">▶</button>
-            <div class="card-body text-start">
-                <h5 class="card-text titulo">Bad Gyal</h5>
-                <p class="card-text des">Artista</p>
-            </div>
-        </div>
-                <div class="card transparente-card me-3">
-            <img src="img/omarCourtz.jpeg" class="card-img-top redondeo p-2" alt="omarCourtz">
-            <button class="play-btn">▶</button>
-            <div class="card-body text-start">
-                <h5 class="card-text titulo">Omar Courtz</h5>
-                <p class="card-text des">Artista</p>
-            </div>
-        </div>
-                <div class="card transparente-card me-3">
-            <img src="img/eladio.jpeg" class="card-img-top redondeo p-2" alt="Eladio">
-            <button class="play-btn">▶</button>
-            <div class="card-body text-start">
-                <h5 class="card-text titulo">Eladio Carrion</h5>
-                <p class="card-text des">Artista</p>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Carrusel 3 -->
-    <div class="d-flex align-items-center gap-4 ">
-        <h4 class="montserrat mb-4 mt-5 mostrar">Álbumes y sencillos populares</h4>
-        <p class="montserrat mb-4 mt-5 ms-auto mostrar">Mostrar todo</p>
-    </div>
-
-    <div id="carruselCanciones3" class="d-flex overflow-auto flex-nowrap pb-3">
-        <!-- tarjetas aquí... -->
-          <div class="card transparente-card me-3">
-            <button class="play-btn">▶</button>
-            <img src="img/ruina.png" class="card-img-top p-2" alt="Ruina">
-            <div class="card-body text-start">
-                <h5 class="card-text titulo">Ruina</h5>
-                <p class="card-text des">Xiyo y Fernandez</p>
-            </div>
-        </div>
-        <div class="card transparente-card me-3">
-            <img src="img/comvoce.jpg" class="card-img-top p-2" alt="Com Voce">
-            <button class="play-btn">▶</button>
-            <div class="card-body text-start">
-                <h5 class="card-text titulo">Com Voce</h5>
-                <p class="card-text des">Judeline, Amaia</p>
-            </div>
-        </div>
-        <div class="card transparente-card me-3">
-            <img src="img/ella.jpg" class="card-img-top p-2" alt="Ella">
-            <button class="play-btn">▶</button>
-            <div class="card-body text-start">
-                <h5 class="card-text titulo">Ella</h5>
-                <p class="card-text des">Zion, Bad Gyal</p>
-            </div>
-        </div>
-        <div class="card transparente-card me-3">
-            <img src="img/aurora.jpg" class="card-img-top p-2" alt="Aurora">
-            <button class="play-btn">▶</button>
-            <div class="card-body text-start">
-                <h5 class="card-text titulo">Aurora</h5>
-                <p class="card-text des">Mora, DeLaRose</p>
-            </div>
-        </div>
-        <div class="card transparente-card me-3">
-            <img src="img/rumor.png" class="card-img-top p-2" alt="RU MOR">
-            <button class="play-btn">▶</button>
-            <div class="card-body text-start">
-                <h5 class="card-text titulo">RU MOR</h5>
-                <p class="card-text des">Feid</p>
-            </div>
-        </div>
-        <div class="card transparente-card me-3">
-            <img src="img/rumor.png" class="card-img-top p-2" alt="RU MOR">
-            <button class="play-btn">▶</button>
-            <div class="card-body text-start">
-                <h5 class="card-text titulo">RU MOR</h5>
-                <p class="card-text des">Feid</p>
-            </div>
-        </div>
-        <div class="card transparente-card me-3">
-            <img src="img/ruina.png" class="card-img-top p-2" alt="Ruina2">
-            <button class="play-btn">▶</button>
-            <div class="card-body text-start">
-                <h5 class="card-text titulo">Ruina 2</h5>
-                <p class="card-text des">Xiyo</p>
-            </div>
-        </div>
-        <div class="card transparente-card me-3">
-            <img src="img/comvoce.jpg" class="card-img-top p-2" alt="Com Voce2">
-            <button class="play-btn">▶</button>
-            <div class="card-body text-start">
-                <h5 class="card-text titulo">Com Voce 2</h5>
-                <p class="card-text des">Amaia</p>
-            </div>
-        </div>
-        <div class="card transparente-card me-3 p-2">
-            <img src="img/ella.jpg" class="card-img-top" alt="Ella2">
-            <button class="play-btn">▶</button>
-            <div class="card-body text-start">
-                <h5 class="card-text titulo">Ella 2</h5>
-                <p class="card-text des">Bad Gyal</p>
-            </div>
-        </div>
-        <div class="card transparente-card me-3">
-            <img src="img/aurora.jpg" class="card-img-top p-2" alt="Aurora2">
-            <button class="play-btn">▶</button>
-            <div class="card-body text-start">
-                <h5 class="card-text titulo">Aurora 2</h5>
-                <p class="card-text des">Mora</p>
-            </div>
-        </div>
-        <div class="card transparente-card me-3">
-            <img src="img/rumor.png" class="card-img-top p-2" alt="RU MOR2">
-            <button class="play-btn">▶</button>
-            <div class="card-body text-start">
-                <h5 class="card-text titulo titulo">RU MOR 2</h5>
-                <p class="card-text des">Feid</p>
-            </div>
-        </div>
-</div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-
-    <!-- Footer escritorio -->
-    <footer class="fixed-bottom text-white py-2 d-none d-md-block desktop-footer">
-        <div class="container-fluid">
-            <!-- Flexbox para alinear el botón y el texto en la misma fila -->
-            <div class="d-flex align-items-center justify-content-between text-container">
-
-                <!-- Texto -->
-                <div class="text-start ms-3">
-                    <p class="frase1 mb-1">Muestra de Spotify</p>
-                    <p class="frase2 mb-0">Regístrate para disfrutar de canciones y podcasts sin límites, con anuncios
-                        ocasionales. No hace falta tarjeta de crédito</p>
+                <button class="play-btn">▶</button>
+                <div class="card-body text-start">
+                    <h5 class="card-text titulo titulo">Tu y Yo</h5>
+                    <p class="card-text des">Metrika & Yung Beef</p>
                 </div>
+            </div>
 
-                <!-- Botón -->
-                <div class="boton">
-                    <button class="btn btn-light btn-oval ">Registrarte gratis</button>
+        </div>
+
+        <!-- Carrusel 2 -->
+        <div class="d-flex align-items-center p-2 ">
+            <h4 class="montserrat gord mb-4 mt-5 mostrar">Artistas Populares</h4>
+            <p class="montserrat mb-4 mt-5 ms-auto mostrar">Mostrar todo</p>
+        </div>
+
+        <div id="carruselCanciones2" class="d-flex overflow-auto flex-nowrap pb-3">
+            <!-- tarjetas aquí... -->
+            <div class="card transparente-card me-3">
+                <img src="img/ab6761610000e5eb81f47f44084e0a09b5f0fa13.jpeg" class="card-img-top redondeo p-2"
+                    alt="Bad Bunny">
+                <button class="play-btn">▶</button>
+                <div class="card-body text-start">
+                    <h5 class="card-text titulo titulo">Bad Bunny</h5>
+                    <p class="card-text des">Artista</p>
+                </div>
+            </div>
+            <div class="card transparente-card me-3">
+                <img src="img/comvoce.jpg" class="card-img-top redondeo p-2" alt="Amaia">
+                <button class="play-btn">▶</button>
+                <div class="card-body text-start">
+                    <h5 class="card-text titulo titulo">Amaia</h5>
+                    <p class="card-text des">Artista</p>
+                </div>
+            </div>
+            <div class="card transparente-card me-3">
+                <img src="img/ella.jpg" class="card-img-top redondeo p-2" alt="Zion">
+                <button class="play-btn">▶</button>
+                <div class="card-body text-start">
+                    <h5 class="card-text titulo titulo">Zion</h5>
+                    <p class="card-text des">Artista</p>
+                </div>
+            </div>
+            <div class="card transparente-card me-3">
+                <img src="img/aurora.jpg" class="card-img-top redondeo p-2" alt="Mora">
+                <button class="play-btn">▶</button>
+                <div class="card-body text-start">
+                    <h5 class="card-text titulo">Mora</h5>
+                    <p class="card-text des">Artista</p>
+                </div>
+            </div>
+            <div class="card transparente-card me-3">
+                <img src="img/feid.jpeg" class="card-img-top redondeo p-2" alt="Feid">
+                <button class="play-btn">▶</button>
+                <div class="card-body text-start">
+                    <h5 class="card-text titulo">Feid</sh5>
+                        <p class="card-text des">Artista</p>
+                </div>
+            </div>
+            <div class="card transparente-card me-3">
+                <img src="img/karolg.jpeg" class="card-img-top redondeo p-2" alt="karolg">
+                <button class="play-btn">▶</button>
+                <div class="card-body text-start">
+                    <h5 class="card-text titulo">Karol G</h5>
+                    <p class="card-text des">Artista</p>
+                </div>
+            </div>
+            <div class="card transparente-card me-3">
+                <img src="img/badgy.jpeg" class="card-img-top redondeo p-2" alt="badgy">
+                <button class="play-btn">▶</button>
+                <div class="card-body text-start">
+                    <h5 class="card-text titulo">Bad Gyal</h5>
+                    <p class="card-text des">Artista</p>
+                </div>
+            </div>
+            <div class="card transparente-card me-3">
+                <img src="img/omarCourtz.jpeg" class="card-img-top redondeo p-2" alt="omarCourtz">
+                <button class="play-btn">▶</button>
+                <div class="card-body text-start">
+                    <h5 class="card-text titulo">Omar Courtz</h5>
+                    <p class="card-text des">Artista</p>
+                </div>
+            </div>
+            <div class="card transparente-card me-3">
+                <img src="img/eladio.jpeg" class="card-img-top redondeo p-2" alt="Eladio">
+                <button class="play-btn">▶</button>
+                <div class="card-body text-start">
+                    <h5 class="card-text titulo">Eladio Carrion</h5>
+                    <p class="card-text des">Artista</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Carrusel 3 -->
+        <div class="d-flex align-items-center gap-4 ">
+            <h4 class="montserrat mb-4 mt-5 mostrar">Álbumes y sencillos populares</h4>
+            <p class="montserrat mb-4 mt-5 ms-auto mostrar">Mostrar todo</p>
+        </div>
+
+        <div id="carruselCanciones3" class="d-flex overflow-auto flex-nowrap pb-3">
+            <!-- tarjetas aquí... -->
+            <div class="card transparente-card me-3">
+                <button class="play-btn">▶</button>
+                <img src="img/ruina.png" class="card-img-top p-2" alt="Ruina">
+                <div class="card-body text-start">
+                    <h5 class="card-text titulo">Ruina</h5>
+                    <p class="card-text des">Xiyo y Fernandez</p>
+                </div>
+            </div>
+            <div class="card transparente-card me-3">
+                <img src="img/comvoce.jpg" class="card-img-top p-2" alt="Com Voce">
+                <button class="play-btn">▶</button>
+                <div class="card-body text-start">
+                    <h5 class="card-text titulo">Com Voce</h5>
+                    <p class="card-text des">Judeline, Amaia</p>
+                </div>
+            </div>
+            <div class="card transparente-card me-3">
+                <img src="img/ella.jpg" class="card-img-top p-2" alt="Ella">
+                <button class="play-btn">▶</button>
+                <div class="card-body text-start">
+                    <h5 class="card-text titulo">Ella</h5>
+                    <p class="card-text des">Zion, Bad Gyal</p>
+                </div>
+            </div>
+            <div class="card transparente-card me-3">
+                <img src="img/aurora.jpg" class="card-img-top p-2" alt="Aurora">
+                <button class="play-btn">▶</button>
+                <div class="card-body text-start">
+                    <h5 class="card-text titulo">Aurora</h5>
+                    <p class="card-text des">Mora, DeLaRose</p>
+                </div>
+            </div>
+            <div class="card transparente-card me-3">
+                <img src="img/rumor.png" class="card-img-top p-2" alt="RU MOR">
+                <button class="play-btn">▶</button>
+                <div class="card-body text-start">
+                    <h5 class="card-text titulo">RU MOR</h5>
+                    <p class="card-text des">Feid</p>
+                </div>
+            </div>
+            <div class="card transparente-card me-3">
+                <img src="img/rumor.png" class="card-img-top p-2" alt="RU MOR">
+                <button class="play-btn">▶</button>
+                <div class="card-body text-start">
+                    <h5 class="card-text titulo">RU MOR</h5>
+                    <p class="card-text des">Feid</p>
+                </div>
+            </div>
+            <div class="card transparente-card me-3">
+                <img src="img/ruina.png" class="card-img-top p-2" alt="Ruina2">
+                <button class="play-btn">▶</button>
+                <div class="card-body text-start">
+                    <h5 class="card-text titulo">Ruina 2</h5>
+                    <p class="card-text des">Xiyo</p>
+                </div>
+            </div>
+            <div class="card transparente-card me-3">
+                <img src="img/comvoce.jpg" class="card-img-top p-2" alt="Com Voce2">
+                <button class="play-btn">▶</button>
+                <div class="card-body text-start">
+                    <h5 class="card-text titulo">Com Voce 2</h5>
+                    <p class="card-text des">Amaia</p>
+                </div>
+            </div>
+            <div class="card transparente-card me-3 p-2">
+                <img src="img/ella.jpg" class="card-img-top" alt="Ella2">
+                <button class="play-btn">▶</button>
+                <div class="card-body text-start">
+                    <h5 class="card-text titulo">Ella 2</h5>
+                    <p class="card-text des">Bad Gyal</p>
+                </div>
+            </div>
+            <div class="card transparente-card me-3">
+                <img src="img/aurora.jpg" class="card-img-top p-2" alt="Aurora2">
+                <button class="play-btn">▶</button>
+                <div class="card-body text-start">
+                    <h5 class="card-text titulo">Aurora 2</h5>
+                    <p class="card-text des">Mora</p>
+                </div>
+            </div>
+            <div class="card transparente-card me-3">
+                <img src="img/rumor.png" class="card-img-top p-2" alt="RU MOR2">
+                <button class="play-btn">▶</button>
+                <div class="card-body text-start">
+                    <h5 class="card-text titulo titulo">RU MOR 2</h5>
+                    <p class="card-text des">Feid</p>
                 </div>
             </div>
         </div>
-    </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
 
-    <!--Footer móvil -->
-    <footer class="fixed-bottom mobile-footer d-md-none">
-  <div class="d-flex justify-content-around text-center py-2">
-    <div class="nav-item">
-      <!-- Inicio -->
-      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
-        class="bi bi-house" viewBox="0 0 16 16">
-        <path
-          d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
-      </svg>
-      <p>Inicio</p>
-    </div>
+        <!-- Footer escritorio -->
+        <footer class="fixed-bottom text-white py-2 d-none d-md-block desktop-footer">
+            <div class="container-fluid">
+                <!-- Flexbox para alinear el botón y el texto en la misma fila -->
+                <div class="d-flex align-items-center justify-content-between text-container">
 
-    <div class="nav-item">
-      <!-- Buscar -->
-      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
-        class="bi bi-search" viewBox="0 0 16 16">
-        <path
-          d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 
+                    <!-- Texto -->
+                    <div class="text-start ms-3">
+                        <p class="frase1 mb-1">Muestra de Spotify</p>
+                        <p class="frase2 mb-0">Regístrate para disfrutar de canciones y podcasts sin límites, con
+                            anuncios
+                            ocasionales. No hace falta tarjeta de crédito</p>
+                    </div>
+
+                    <!-- Botón -->
+                    <div class="boton">
+                        <button class="btn btn-light btn-oval ">Registrarte gratis</button>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!--Footer móvil -->
+        <footer class="fixed-bottom mobile-footer d-md-none">
+            <div class="d-flex justify-content-around text-center py-2">
+                <div class="nav-item">
+                    <!-- Inicio -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                        class="bi bi-house" viewBox="0 0 16 16">
+                        <path
+                            d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                    </svg>
+                    <p>Inicio</p>
+                </div>
+
+                <div class="nav-item">
+                    <!-- Buscar -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 
           1.415-1.415l-3.85-3.85zm-5.242.656a5 5 0 1 
           1 0-10 5 5 0 0 1 0 10z" />
-      </svg>
-      <p>Buscar</p>
-    </div>
+                    </svg>
+                    <p>Buscar</p>
+                </div>
 
-    <div class="nav-item">
-      <!-- Tu biblioteca -->
-      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
-        class="bi bi-collection" viewBox="0 0 16 16">
-        <path
-          d="M2 3a1 1 0 0 0-1 1v9h1V4h12V3H2zm13 
+                <div class="nav-item">
+                    <!-- Tu biblioteca -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                        class="bi bi-collection" viewBox="0 0 16 16">
+                        <path d="M2 3a1 1 0 0 0-1 1v9h1V4h12V3H2zm13 
           2H1a1 1 0 0 0-1 1v7h15V6a1 1 0 0 0-1-1zM0 
           14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1H0z" />
-      </svg>
-      <p>Tu biblioteca</p>
-    </div>
+                    </svg>
+                    <p>Tu biblioteca</p>
+                </div>
 
-    <div class="nav-item">
-      <!-- Premium -->
-      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
-        class="bi bi-spotify" viewBox="0 0 16 16">
-        <path
-          d="M8 0a8 8 0 1 0 0 16A8 
+                <div class="nav-item">
+                    <!-- Premium -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                        class="bi bi-spotify" viewBox="0 0 16 16">
+                        <path d="M8 0a8 8 0 1 0 0 16A8 
           8 0 0 0 8 0zm3.766 11.566a.5.5 0 0 1-.683.183A7.097 
           7.097 0 0 0 5.5 10.5a.5.5 0 0 1 0-1 
           8.098 8.098 0 0 1 6.027 1.334.5.5 0 0 
@@ -497,14 +498,16 @@
           0-8.706-.975.75.75 0 1 1-.434-1.44 
           12.182 12.182 0 0 1 9.932 1.12c.36.2.488.66.233 
           1.018z" />
-      </svg>
-      <p>Premium</p>
-    </div>
-  </div>
-</footer>
+                    </svg>
+                    <p>Premium</p>
+                </div>
+            </div>
+        </footer>
 
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-<script defer src="Componentes/PaginaCarruseles/paginacarrusel/paginacarrusel.js"></script>
+        <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            crossorigin="anonymous"></script>
+        <script defer src="Componentes/PaginaCarruseles/paginacarrusel/paginacarrusel.js"></script>
 </body>
+
 </html>
