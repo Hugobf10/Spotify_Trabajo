@@ -1,6 +1,6 @@
 package com.trinitarias.Spotifyform.dt;
 
-public class DatosDirecciónDto {
+public class DatosDireccionDto {
     private String tipoVia; // Desplegable
     private String via;
     private String numero;
@@ -12,7 +12,7 @@ public class DatosDirecciónDto {
     private String localidad;
     private String pais;
     
-	public DatosDirecciónDto(String tipoVia, String via, String numero, String piso, String puerta, String tipoVivienda,
+	public DatosDireccionDto(String tipoVia, String via, String numero, String piso, String puerta, String tipoVivienda,
 			String codigoPostal, String provincia, String localidad, String pais) {
 		super();
 		this.tipoVia = tipoVia;
