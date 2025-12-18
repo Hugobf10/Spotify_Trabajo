@@ -42,6 +42,9 @@ Bootstrap Icons
 Google Fonts (Montserrat)
 
 ---
+##💻 Documentación
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Hugobf10/Spotify_Trabajo)
+---
 
 ## 👩‍💻 Autores
 
